@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google Material Design Icons. See https://google.github.io/material-design-icons/ -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        #grody {
+            background: #000;
+        }
+
+        .material-icons {
+            font-size: 3rem
+        }
+
+        .row {
+            padding-left: .3rem;
+            padding-top: .3rem;
+        }
+    </style>
+    <title>TouchPS </title>
+</head>
+
+<body id="bootstrap">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container-fluid">
+                    <div class="row">
+                        <button class="btn btn-primary" style="width: 8rem;" onclick="$.ajax('/api/greet')">
+                            <i class="material-icons">play_arrow</i></br>
+                            Start | Pause
+                        </button>&nbsp;
+                        <button class="btn btn-primary" style="width: 8rem;" onclick="$.ajax('/api/pid')">
+                            Get Pid
+                        </button>&nbsp;
+                        <button class="btn btn-success" style="width: 8rem;">
+                            Button 3
+                        </button>&nbsp;
+                        <button class="btn btn-success" style="width: 8rem;">
+                            Button 4
+                        </button>&nbsp;
+                        <button class="btn btn-dark" style="width: 8rem;" onclick="$('.carousel').carousel(1)">
+                            Second Page
+                        </button>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-secondary" style="width: 8rem;">
+                            Button 6
+                        </button>&nbsp;
+                        <button class="btn btn-secondary" style="width: 8rem;">
+                            Button 7
+                        </button>&nbsp;
+                        <button class="btn btn-info" style="width: 8rem;">
+                            Button 8
+                        </button>&nbsp;
+                        <button class="btn btn-info" style="width: 8rem;">
+                            Button 9
+                        </button>&nbsp;
+                        <button class="btn btn-info" style="width: 8rem;">
+                            Button 10
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <button class="btn btn-primary" style="width: 8rem;" onclick="$.ajax('/api/greet')">
+                            <i class="material-icons">play_arrow</i></br>
+                            Start | Pause
+                        </button>&nbsp;
+                        <button class="btn btn-primary" style="width: 8rem;">
+                            Button 12
+                        </button>&nbsp;
+                        <button class="btn btn-info" style="width: 8rem;">
+                            Button 13
+                        </button>&nbsp;
+                        <button class="btn btn-info" style="width: 8rem;">
+                            Button 14
+                        </button>&nbsp;
+                        <button class="btn btn-info" style="width: 8rem;">
+                            Button 15
+                        </button>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-warning" style="width: 8rem;">
+                            Button 16
+                        </button>&nbsp;
+                        <button class="btn btn-warning" style="width: 8rem;">
+                            Button 17
+                        </button>&nbsp;
+                        <button class="btn btn-info" style="width: 8rem;">
+                            Button 18
+                        </button>&nbsp;
+                        <button class="btn btn-info" style="width: 8rem;">
+                            Button 19
+                        </button>&nbsp;
+                        <button class="btn btn-dark" style="width: 8rem;" onclick="$('.carousel').carousel(0)">
+                            First Page
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // don't slide automatically
+        $('.carousel').carousel({ interval: 0 })
+    </script>
+</body>
+
+</html>
