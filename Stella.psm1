@@ -20,11 +20,11 @@ class Polaris {
         Write-Host "Configuring Polaris"
         if($Script:UseFileServer) {
             [FileServerExtensions]::UseFileServer($app, $true)
+            # [DefaultFilesExtensions]::UseDefaultFiles($app)
+            # [StaticFileExtensions]::UseStaticFiles($app)
+            # [DirectoryBrowserExtensions]::UseDirectoryBrowser($app)
         }
-        # [DefaultFilesExtensions]::UseDefaultFiles($app)
-        # [StaticFileExtensions]::UseStaticFiles($app)
-        # [DirectoryBrowserExtensions]::UseDirectoryBrowser($app)
-        # [MvcApplicationBuilderExtensions]::UseMvcWithDefaultRoute($app)
+        # [MvcApplicationBuilderExtensions]::UseMvc($app) #WithDefaultRoute
         # $DirOptions = [DirectoryBrowserOptions]@{
         #     FileProvider = [PhysicalFileProvider]::new("C:\Users\Joel\Projects\Modules\TouchPS\Source\Web\")
         #     RequestPath = "/web"
@@ -35,16 +35,61 @@ class Polaris {
     [void] ConfigureServices([IServiceCollection]$svc) {
         Write-Host "Configuring Polaris Services"
         # [DirectoryBrowserServiceExtensions]::AddDirectoryBrowser($svc)
-        #[MvcServiceCollectionExtensions]::AddMvc($svc)
+        # $MvcBuilder = [MvcServiceCollectionExtensions]::AddMvc($svc)
+        # $MvcBuilder = [MvcCoreMvcBuilderExtensions]::ConfigureApplicationPartManager($MvcBuilder,
+        #     [Action[Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartManager]]{
+        #         param($PartManager)
+        #         Write-Host "Manage Parts"
+        #         if($asm = $PartManager.ApplicationParts.Where({$_.Name -match 'PowerShell Class Assembly'}, "First", 1)) {
+        #             Write-Host "Remove $($asm.Name)"
+        #             $PartManager.ApplicationParts.Remove($asm)
+        #         }
+        #     })
     }
 }
 
-class Api : Controller {
-    [HttpGet()]
-    [string] Date() {
-        return [DateTimeOffset]::UtcNow.ToString("o")
-    }
-}
+# if (!("PolarisPartManater" -as [type])) {
+
+#     add-type @"
+# using System;
+# using System.Collections.Generic;
+# using System.Linq;
+# using System.Reflection;
+# using Microsoft.AspNetCore.Mvc.ApplicationParts;
+
+# public class PolarisPartManager : ApplicationPartManager {
+
+#     new public void PopulateDefaultParts(string entryAssemblyName)
+#     {
+#         AppDomain.CurrentDomain.GetAssemblies()
+#             var entryAssembly = Assembly.Load(new AssemblyName(entryAssemblyName));
+#             var assembliesProvider = new ApplicationAssembliesProvider();
+#             var applicationAssemblies = assembliesProvider.ResolveAssemblies(entryAssembly);
+
+#             foreach (var assembly in applicationAssemblies)
+#             {
+#                 var partFactory = ApplicationPartFactory.GetApplicationPartFactory(assembly);
+#                 foreach (var part in partFactory.GetApplicationParts(assembly))
+#                 {
+#                     ApplicationParts.Add(part);
+#                 }
+#             }
+#     }
+# }
+# "@
+
+# }
+
+
+# [Produces("application/json")]
+# [Route("api/[controller]")]
+# class DateController : ControllerBase {
+
+#     [HttpGet()]
+#     [DateTimeOffset] Date() {
+#         return [DateTimeOffset]::UtcNow
+#     }
+# }
 
 function Start-Stella {
     [CmdletBinding()]
@@ -64,6 +109,7 @@ function Start-Stella {
     } else {
         $Script:UseFileServer = Test-Path (Join-Path $ContentRoot wwwroot)
     }
+    # https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
     $builder = [WebHostBuilderKestrelExtensions]::UseKestrel($builder)
     $builder = [WebHostBuilderKestrelExtensions]::ConfigureKestrel($builder,
     [Action[WebHostBuilderContext,KestrelServerOptions]]{
@@ -77,9 +123,9 @@ function Start-Stella {
 
         $options.Listen([IPAddress]::Any, 8080)
 
-        # $options.Listen([IPAddress]::Loopback, 5001, listenOptions =>
-        # {
-        #     listenOptions.UseHttps("testCert.pfx", "testPassword");
+        # $options.Listen([IPAddress]::Any, 8081,
+        # { param($listenOptions)
+        #     $listenOptions.UseHttps("testCert.pfx", "testPassword");
         # });
     });
 
