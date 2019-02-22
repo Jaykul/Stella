@@ -7,6 +7,7 @@ using namespace System.Threading.Tasks
 using namespace Microsoft.AspNetCore
 using namespace Microsoft.AspNetCore.Hosting
 using namespace Microsoft.AspNetCore.Mvc
+using namespace Microsoft.AspNetCore.Mvc.Controllers
 using namespace Microsoft.Extensions.Configuration
 using namespace Microsoft.Extensions.Logging
 using namespace Microsoft.AspNetCore.Builder
@@ -14,6 +15,7 @@ using namespace Microsoft.AspNetCore.Server.Kestrel.Core
 using namespace Microsoft.Extensions.FileProviders
 using namespace Microsoft.Extensions.DependencyInjection
 using namespace Microsoft.AspNetCore.Mvc.ApplicationParts
+using namespace PoshCode
 $webroot = Join-Path $PSScriptRoot Web
 
 [Produces("application/json")]
@@ -25,9 +27,14 @@ class DateController : ControllerBase {
     }
 }
 
+# class PowerShellControllerFactory : IControllerFactory {
+
+#     CreateControllerFactory(ControllerActionDescriptor)
+#     CreateControllerReleaser(ControllerActionDescriptor)
+# }
 
 # Manages the parts and features of an MVC application.
-class StellaPartManager : ApplicationPartManager
+class PowerShellPartManager : ApplicationPartManager
 {
     # The list of <see cref="IApplicationFeatureProvider"/>s.
     # [IList[IApplicationFeatureProvider]] get_FeatureProviders() {  }
@@ -56,7 +63,7 @@ class StellaPartManager : ApplicationPartManager
     #     }
     # }
 
-    StellaPartManager() {
+    PowerShellPartManager() {
         $partFactory = [ApplicationPartFactory]::GetApplicationPartFactory([DateController].Assembly);
 
         Write-Host "Looking for parts in $([DateController].Assembly.FullName)"
@@ -72,6 +79,7 @@ class Stella {
     [void] Configure([IApplicationBuilder]$app, [IHostingEnvironment]$env) {
         Write-Host "Configuring Polaris"
         # PowerShellClassesNeedExtensionMethods
+        [PowerShellMiddlewareExtensions]::UseNewRunspace($app)
         [DeveloperExceptionPageExtensions]::UseDeveloperExceptionPage($app)
         if($Script:UseFileServer) {
             [FileServerExtensions]::UseFileServer($app, $true)
@@ -88,8 +96,8 @@ class Stella {
     }
 
     [void] ConfigureServices([IServiceCollection]$svc) {
-        Write-Host "Configuring Polaris Services with StellaPartManager"
-        $svc = [ServiceCollectionServiceExtensions]::AddSingleton($svc, [ApplicationPartManager], [StellaPartManager]::new() )
+        Write-Host "Configuring Polaris Services with PowerShellPartManager"
+        $svc = [ServiceCollectionServiceExtensions]::AddSingleton($svc, [ApplicationPartManager], [PowerShellPartManager]::new() )
         # [DirectoryBrowserServiceExtensions]::AddDirectoryBrowser($svc)
         $MvcBuilder = [MvcServiceCollectionExtensions]::AddMvc($svc)
         #$MvcBuilder = [MvcCoreServiceCollectionExtensions]::AddMvcCore($svc)
@@ -125,6 +133,7 @@ function Start-Stella {
         $options.Limits.MaxRequestBodySize = 10 * 1024
         $options.Limits.MinRequestBodyDataRate = [MinDataRate]::new(100, "00:00:10")
         $options.Limits.MinResponseDataRate = [MinDataRate]::new(100, "00:00:10")
+        $options.ThreadCount = 1
 
         $options.Listen([IPAddress]::Any, 8080)
 

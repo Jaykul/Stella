@@ -55,6 +55,7 @@ Copyright = '(c) Joel. All rights reserved.'
 
 # Assemblies that must be loaded prior to importing this module
 RequiredAssemblies = @(
+    ".\bin\PowerShellMiddleware.dll"
     ".\bin\Microsoft.AspNetCore.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.dll"
     ".\bin\Microsoft.AspNetCore.Hosting.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.dll"
     ".\bin\Microsoft.AspNetCore.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Abstractions.dll"
@@ -144,7 +145,7 @@ RequiredAssemblies = @(
 )
 
 # Script files (.ps1) that are run in the caller's environment prior to importing this module.
-# ScriptsToProcess = @()
+ScriptsToProcess = @(".\PowerShellMiddleWare.ps1")
 
 # Type files (.ps1xml) to be loaded when importing this module
 # TypesToProcess = @()
