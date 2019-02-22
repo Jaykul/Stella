@@ -2,6 +2,7 @@ using namespace System
 using namespace System.Collections.Generic
 using namespace System.IO
 using namespace System.Linq
+using namespace System.Reflection
 using namespace System.Threading.Tasks
 using namespace Microsoft.AspNetCore
 using namespace Microsoft.AspNetCore.Hosting
@@ -12,19 +13,73 @@ using namespace Microsoft.AspNetCore.Builder
 using namespace Microsoft.AspNetCore.Server.Kestrel.Core
 using namespace Microsoft.Extensions.FileProviders
 using namespace Microsoft.Extensions.DependencyInjection
-
+using namespace Microsoft.AspNetCore.Mvc.ApplicationParts
 $webroot = Join-Path $PSScriptRoot Web
 
-class Polaris {
+[Produces("application/json")]
+[Route("api/[controller]")]
+class DateController : ControllerBase {
+    [HttpGet()]
+    [DateTimeOffset] Date() {
+        return [DateTimeOffset]::UtcNow
+    }
+}
+
+
+# Manages the parts and features of an MVC application.
+class StellaPartManager : ApplicationPartManager
+{
+    # The list of <see cref="IApplicationFeatureProvider"/>s.
+    # [IList[IApplicationFeatureProvider]] get_FeatureProviders() {  }
+
+    # The list of <see cref="ApplicationPart"/> instances.
+    # [IList[ApplicationPart]] get_ApplicationParts {  }
+
+    # Populates the given feature using the list of Features configured on the ApplicationPartManager
+    # Cannot be overriden in PowerShell, because we don't have generics. Help me obiwan!
+    # PowerShellClassesFailures
+    # [void] PopulateFeature<TFeature>(TFeature feature)
+
+    # [hidden] [void] PopulateDefaultParts()
+    # {
+    #     var entryAssembly = Assembly.Load(new AssemblyName(entryAssemblyName));
+    #     var assembliesProvider = new ApplicationAssembliesProvider();
+    #     var applicationAssemblies = assembliesProvider.ResolveAssemblies(entryAssembly);
+
+    #     foreach (var assembly in applicationAssemblies)
+    #     {
+    #         var partFactory = ApplicationPartFactory.GetApplicationPartFactory(assembly);
+    #         foreach (var part in partFactory.GetApplicationParts(assembly))
+    #         {
+    #             ApplicationParts.Add(part);
+    #         }
+    #     }
+    # }
+
+    StellaPartManager() {
+        $partFactory = [ApplicationPartFactory]::GetApplicationPartFactory([DateController].Assembly);
+
+        Write-Host "Looking for parts in $([DateController].Assembly.FullName)"
+        foreach ($part in $partFactory.GetApplicationParts([DateController].Assembly))
+        {
+            Write-Host "Discovered $($part.Name) from $($part.Assembly.FullName)"
+            $this.ApplicationParts.Add($part);
+        }
+    }
+}
+
+class Stella {
     [void] Configure([IApplicationBuilder]$app, [IHostingEnvironment]$env) {
         Write-Host "Configuring Polaris"
+        # PowerShellClassesNeedExtensionMethods
+        [DeveloperExceptionPageExtensions]::UseDeveloperExceptionPage($app)
         if($Script:UseFileServer) {
             [FileServerExtensions]::UseFileServer($app, $true)
             # [DefaultFilesExtensions]::UseDefaultFiles($app)
             # [StaticFileExtensions]::UseStaticFiles($app)
             # [DirectoryBrowserExtensions]::UseDirectoryBrowser($app)
         }
-        # [MvcApplicationBuilderExtensions]::UseMvc($app) #WithDefaultRoute
+        [MvcApplicationBuilderExtensions]::UseMvc($app) #WithDefaultRoute
         # $DirOptions = [DirectoryBrowserOptions]@{
         #     FileProvider = [PhysicalFileProvider]::new("C:\Users\Joel\Projects\Modules\TouchPS\Source\Web\")
         #     RequestPath = "/web"
@@ -33,63 +88,13 @@ class Polaris {
     }
 
     [void] ConfigureServices([IServiceCollection]$svc) {
-        Write-Host "Configuring Polaris Services"
+        Write-Host "Configuring Polaris Services with StellaPartManager"
+        $svc = [ServiceCollectionServiceExtensions]::AddSingleton($svc, [ApplicationPartManager], [StellaPartManager]::new() )
         # [DirectoryBrowserServiceExtensions]::AddDirectoryBrowser($svc)
-        # $MvcBuilder = [MvcServiceCollectionExtensions]::AddMvc($svc)
-        # $MvcBuilder = [MvcCoreMvcBuilderExtensions]::ConfigureApplicationPartManager($MvcBuilder,
-        #     [Action[Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartManager]]{
-        #         param($PartManager)
-        #         Write-Host "Manage Parts"
-        #         if($asm = $PartManager.ApplicationParts.Where({$_.Name -match 'PowerShell Class Assembly'}, "First", 1)) {
-        #             Write-Host "Remove $($asm.Name)"
-        #             $PartManager.ApplicationParts.Remove($asm)
-        #         }
-        #     })
+        $MvcBuilder = [MvcServiceCollectionExtensions]::AddMvc($svc)
+        #$MvcBuilder = [MvcCoreServiceCollectionExtensions]::AddMvcCore($svc)
     }
 }
-
-# if (!("PolarisPartManater" -as [type])) {
-
-#     add-type @"
-# using System;
-# using System.Collections.Generic;
-# using System.Linq;
-# using System.Reflection;
-# using Microsoft.AspNetCore.Mvc.ApplicationParts;
-
-# public class PolarisPartManager : ApplicationPartManager {
-
-#     new public void PopulateDefaultParts(string entryAssemblyName)
-#     {
-#         AppDomain.CurrentDomain.GetAssemblies()
-#             var entryAssembly = Assembly.Load(new AssemblyName(entryAssemblyName));
-#             var assembliesProvider = new ApplicationAssembliesProvider();
-#             var applicationAssemblies = assembliesProvider.ResolveAssemblies(entryAssembly);
-
-#             foreach (var assembly in applicationAssemblies)
-#             {
-#                 var partFactory = ApplicationPartFactory.GetApplicationPartFactory(assembly);
-#                 foreach (var part in partFactory.GetApplicationParts(assembly))
-#                 {
-#                     ApplicationParts.Add(part);
-#                 }
-#             }
-#     }
-# }
-# "@
-
-# }
-
-
-# [Produces("application/json")]
-# [Route("api/[controller]")]
-# class DateController : ControllerBase {
-
-#     [HttpGet()]
-#     [DateTimeOffset] Date() {
-#         return [DateTimeOffset]::UtcNow
-#     }
-# }
 
 function Start-Stella {
     [CmdletBinding()]
@@ -101,7 +106,7 @@ function Start-Stella {
     )
 
     $builder = [WebHostBuilder]::new()
-    $builder = [WebHostBuilderExtensions]::UseStartup($builder, [Polaris])
+    $builder = [WebHostBuilderExtensions]::UseStartup($builder, [Stella])
     $builder = [HostingAbstractionsWebHostBuilderExtensions]::UseContentRoot($builder, $ContentRoot)
     if($WebRoot) {
         $Script:UseFileServer = $true
@@ -129,6 +134,8 @@ function Start-Stella {
         # });
     });
 
+    # We need to put this runspace into each thread, like:
+    # [System.Management.Automation.Runspaces.Runspace]::DefaultRunspace = Get-Runspace
 
     $webhost = $builder.build()
     [WebHostExtensions]::Run($webhost)
