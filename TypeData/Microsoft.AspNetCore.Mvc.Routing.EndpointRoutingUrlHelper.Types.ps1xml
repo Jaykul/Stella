@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Mvc.Routing.EndpointRoutingUrlHelper</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Action</Name>
+        <Script> switch ($args.Count) {
+				 # Action([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper)
+		 0 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Action($this) }
+
+				 # Action([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $action)
+		 1 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Action($this,$args[0]) }
+
+				 # Action([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $action, [System.Object] $values)
+		 2 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Action($this,$args[0],$args[1]) }
+
+				 # Action([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $action, [System.String] $controller, [System.Object] $values)
+		 3 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Action($this,$args[0],$args[1],$args[2]) }
+
+				 # Action([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $action, [System.String] $controller, [System.Object] $values, [System.String] $protocol)
+		 4 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Action($this,$args[0],$args[1],$args[2],$args[3]) }
+
+				 # Action([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $action, [System.String] $controller, [System.Object] $values, [System.String] $protocol, [System.String] $host)
+		 5 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Action($this,$args[0],$args[1],$args[2],$args[3],$args[4]) }
+
+				 # Action([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $action, [System.String] $controller, [System.Object] $values, [System.String] $protocol, [System.String] $host, [System.String] $fragment)
+		 6 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Action($this,$args[0],$args[1],$args[2],$args[3],$args[4],$args[5]) }
+
+		 default { throw "No overload for 'Action' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Page</Name>
+        <Script> switch ($args.Count) {
+				 # Page([Microsoft.AspNetCore.Mvc.IUrlHelper] $urlHelper, [System.String] $pageName)
+		 1 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Page($this,$args[0]) }
+
+				 # Page([Microsoft.AspNetCore.Mvc.IUrlHelper] $urlHelper, [System.String] $pageName, [System.String] $pageHandler)
+		 2 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Page($this,$args[0],$args[1]) }
+
+				 # Page([Microsoft.AspNetCore.Mvc.IUrlHelper] $urlHelper, [System.String] $pageName, [System.String] $pageHandler, [System.Object] $values)
+		 3 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Page($this,$args[0],$args[1],$args[2]) }
+
+				 # Page([Microsoft.AspNetCore.Mvc.IUrlHelper] $urlHelper, [System.String] $pageName, [System.String] $pageHandler, [System.Object] $values, [System.String] $protocol)
+		 4 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Page($this,$args[0],$args[1],$args[2],$args[3]) }
+
+				 # Page([Microsoft.AspNetCore.Mvc.IUrlHelper] $urlHelper, [System.String] $pageName, [System.String] $pageHandler, [System.Object] $values, [System.String] $protocol, [System.String] $host)
+		 5 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Page($this,$args[0],$args[1],$args[2],$args[3],$args[4]) }
+
+				 # Page([Microsoft.AspNetCore.Mvc.IUrlHelper] $urlHelper, [System.String] $pageName, [System.String] $pageHandler, [System.Object] $values, [System.String] $protocol, [System.String] $host, [System.String] $fragment)
+		 6 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::Page($this,$args[0],$args[1],$args[2],$args[3],$args[4],$args[5]) }
+
+		 default { throw "No overload for 'Page' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RouteUrl</Name>
+        <Script> switch ($args.Count) {
+				 # RouteUrl([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.Object] $values)
+		 1 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::RouteUrl($this,$args[0]) }
+
+				 # RouteUrl([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $routeName, [System.Object] $values)
+		 2 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::RouteUrl($this,$args[0],$args[1]) }
+
+				 # RouteUrl([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $routeName, [System.Object] $values, [System.String] $protocol)
+		 3 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::RouteUrl($this,$args[0],$args[1],$args[2]) }
+
+				 # RouteUrl([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $routeName, [System.Object] $values, [System.String] $protocol, [System.String] $host)
+		 4 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::RouteUrl($this,$args[0],$args[1],$args[2],$args[3]) }
+
+				 # RouteUrl([Microsoft.AspNetCore.Mvc.IUrlHelper] $helper, [System.String] $routeName, [System.Object] $values, [System.String] $protocol, [System.String] $host, [System.String] $fragment)
+		 5 { [Microsoft.AspNetCore.Mvc.UrlHelperExtensions]::RouteUrl($this,$args[0],$args[1],$args[2],$args[3],$args[4]) }
+
+		 default { throw "No overload for 'RouteUrl' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

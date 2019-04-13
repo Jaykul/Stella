@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>ActionLink</Name>
+        <Script> switch ($args.Count) {
+				 # ActionLink([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $helper, [System.String] $linkText, [System.String] $actionName)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLinkExtensions]::ActionLink($this,$args[0],$args[1]) }
+
+				 # ActionLink([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $helper, [System.String] $linkText, [System.String] $actionName, [System.Object] $routeValues)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLinkExtensions]::ActionLink($this,$args[0],$args[1],$args[2]) }
+
+				 # ActionLink([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $helper, [System.String] $linkText, [System.String] $actionName, [System.Object] $routeValues, [System.Object] $htmlAttributes)
+		 4 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLinkExtensions]::ActionLink($this,$args[0],$args[1],$args[2],$args[3]) }
+
+				 # ActionLink([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $helper, [System.String] $linkText, [System.String] $actionName, [System.String] $controllerName, [System.Object] $routeValues, [System.Object] $htmlAttributes)
+		 5 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLinkExtensions]::ActionLink($this,$args[0],$args[1],$args[2],$args[3],$args[4]) }
+
+		 default { throw "No overload for 'ActionLink' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeginForm</Name>
+        <Script> switch ($args.Count) {
+				 # BeginForm([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperFormExtensions]::BeginForm($this) }
+
+				 # BeginForm([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.Nullable`1[System.Boolean]] $antiforgery)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperFormExtensions]::BeginForm($this,$args[0]) }
+
+				 # BeginForm([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [Microsoft.AspNetCore.Mvc.Rendering.FormMethod] $method, [System.Object] $htmlAttributes)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperFormExtensions]::BeginForm($this,$args[0],$args[1]) }
+
+				 # BeginForm([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [Microsoft.AspNetCore.Mvc.Rendering.FormMethod] $method, [System.Nullable`1[System.Boolean]] $antiforgery, [System.Object] $htmlAttributes)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperFormExtensions]::BeginForm($this,$args[0],$args[1],$args[2]) }
+
+				 # BeginForm([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $actionName, [System.String] $controllerName, [System.Object] $routeValues, [Microsoft.AspNetCore.Mvc.Rendering.FormMethod] $method)
+		 4 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperFormExtensions]::BeginForm($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'BeginForm' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeginRouteForm</Name>
+        <Script> switch ($args.Count) {
+				 # BeginRouteForm([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.Object] $routeValues)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperFormExtensions]::BeginRouteForm($this,$args[0]) }
+
+				 # BeginRouteForm([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.Object] $routeValues, [System.Nullable`1[System.Boolean]] $antiforgery)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperFormExtensions]::BeginRouteForm($this,$args[0],$args[1]) }
+
+				 # BeginRouteForm([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $routeName, [System.Object] $routeValues, [Microsoft.AspNetCore.Mvc.Rendering.FormMethod] $method)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperFormExtensions]::BeginRouteForm($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'BeginRouteForm' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>CheckBox</Name>
+        <Script> switch ($args.Count) {
+				 # CheckBox([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::CheckBox($this,$args[0]) }
+
+				 # CheckBox([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Boolean] $isChecked)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::CheckBox($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'CheckBox' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Display</Name>
+        <Script> switch ($args.Count) {
+				 # Display([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperDisplayExtensions]::Display($this,$args[0]) }
+
+				 # Display([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Object] $additionalViewData)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperDisplayExtensions]::Display($this,$args[0],$args[1]) }
+
+				 # Display([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.String] $templateName, [System.Object] $additionalViewData)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperDisplayExtensions]::Display($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'Display' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>DisplayForModel</Name>
+        <Script> switch ($args.Count) {
+				 # DisplayForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperDisplayExtensions]::DisplayForModel($this) }
+
+				 # DisplayForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.Object] $additionalViewData)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperDisplayExtensions]::DisplayForModel($this,$args[0]) }
+
+				 # DisplayForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $templateName, [System.Object] $additionalViewData)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperDisplayExtensions]::DisplayForModel($this,$args[0],$args[1]) }
+
+				 # DisplayForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $templateName, [System.String] $htmlFieldName, [System.Object] $additionalViewData)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperDisplayExtensions]::DisplayForModel($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'DisplayForModel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>DisplayNameForModel</Name>
+        <Script> switch ($args.Count) {
+				 # DisplayNameForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperDisplayNameExtensions]::DisplayNameForModel($this) }
+
+		 default { throw "No overload for 'DisplayNameForModel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>DropDownList</Name>
+        <Script> switch ($args.Count) {
+				 # DropDownList([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions]::DropDownList($this,$args[0]) }
+
+				 # DropDownList([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.String] $optionLabel)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions]::DropDownList($this,$args[0],$args[1]) }
+
+				 # DropDownList([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Collections.Generic.IEnumerable`1[Microsoft.AspNetCore.Mvc.Rendering.SelectListItem]] $selectList, [System.Object] $htmlAttributes)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions]::DropDownList($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'DropDownList' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Editor</Name>
+        <Script> switch ($args.Count) {
+				 # Editor([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperEditorExtensions]::Editor($this,$args[0]) }
+
+				 # Editor([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Object] $additionalViewData)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperEditorExtensions]::Editor($this,$args[0],$args[1]) }
+
+				 # Editor([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.String] $templateName, [System.Object] $additionalViewData)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperEditorExtensions]::Editor($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'Editor' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>EditorForModel</Name>
+        <Script> switch ($args.Count) {
+				 # EditorForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperEditorExtensions]::EditorForModel($this) }
+
+				 # EditorForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.Object] $additionalViewData)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperEditorExtensions]::EditorForModel($this,$args[0]) }
+
+				 # EditorForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $templateName, [System.Object] $additionalViewData)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperEditorExtensions]::EditorForModel($this,$args[0],$args[1]) }
+
+				 # EditorForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $templateName, [System.String] $htmlFieldName, [System.Object] $additionalViewData)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperEditorExtensions]::EditorForModel($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'EditorForModel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Hidden</Name>
+        <Script> switch ($args.Count) {
+				 # Hidden([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::Hidden($this,$args[0]) }
+
+				 # Hidden([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Object] $value)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::Hidden($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Hidden' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>IdForModel</Name>
+        <Script> switch ($args.Count) {
+				 # IdForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperNameExtensions]::IdForModel($this) }
+
+		 default { throw "No overload for 'IdForModel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Label</Name>
+        <Script> switch ($args.Count) {
+				 # Label([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLabelExtensions]::Label($this,$args[0]) }
+
+				 # Label([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.String] $labelText)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLabelExtensions]::Label($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Label' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>LabelForModel</Name>
+        <Script> switch ($args.Count) {
+				 # LabelForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLabelExtensions]::LabelForModel($this) }
+
+				 # LabelForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $labelText)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLabelExtensions]::LabelForModel($this,$args[0]) }
+
+				 # LabelForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $labelText, [System.Object] $htmlAttributes)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLabelExtensions]::LabelForModel($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'LabelForModel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ListBox</Name>
+        <Script> switch ($args.Count) {
+				 # ListBox([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions]::ListBox($this,$args[0]) }
+
+				 # ListBox([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Collections.Generic.IEnumerable`1[Microsoft.AspNetCore.Mvc.Rendering.SelectListItem]] $selectList)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions]::ListBox($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ListBox' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>NameForModel</Name>
+        <Script> switch ($args.Count) {
+				 # NameForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperNameExtensions]::NameForModel($this) }
+
+		 default { throw "No overload for 'NameForModel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Partial</Name>
+        <Script> switch ($args.Count) {
+				 # Partial([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::Partial($this,$args[0]) }
+
+				 # Partial([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName, [Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary] $viewData)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::Partial($this,$args[0],$args[1]) }
+
+				 # Partial([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName, [System.Object] $model, [Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary] $viewData)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::Partial($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'Partial' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>PartialAsync</Name>
+        <Script> switch ($args.Count) {
+				 # PartialAsync([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::PartialAsync($this,$args[0]) }
+
+				 # PartialAsync([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName, [Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary] $viewData)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::PartialAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'PartialAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Password</Name>
+        <Script> switch ($args.Count) {
+				 # Password([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::Password($this,$args[0]) }
+
+				 # Password([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Object] $value)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::Password($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Password' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RadioButton</Name>
+        <Script> switch ($args.Count) {
+				 # RadioButton([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Object] $value)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::RadioButton($this,$args[0],$args[1]) }
+
+				 # RadioButton([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Object] $value, [System.Object] $htmlAttributes)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::RadioButton($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'RadioButton' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RenderPartial</Name>
+        <Script> switch ($args.Count) {
+				 # RenderPartial([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::RenderPartial($this,$args[0]) }
+
+				 # RenderPartial([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName, [Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary] $viewData)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::RenderPartial($this,$args[0],$args[1]) }
+
+				 # RenderPartial([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName, [System.Object] $model, [Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary] $viewData)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::RenderPartial($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'RenderPartial' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RenderPartialAsync</Name>
+        <Script> switch ($args.Count) {
+				 # RenderPartialAsync([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::RenderPartialAsync($this,$args[0]) }
+
+				 # RenderPartialAsync([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $partialViewName, [Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary] $viewData)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions]::RenderPartialAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'RenderPartialAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RouteLink</Name>
+        <Script> switch ($args.Count) {
+				 # RouteLink([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $linkText, [System.Object] $routeValues)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLinkExtensions]::RouteLink($this,$args[0],$args[1]) }
+
+				 # RouteLink([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $linkText, [System.String] $routeName, [System.Object] $routeValues)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLinkExtensions]::RouteLink($this,$args[0],$args[1],$args[2]) }
+
+				 # RouteLink([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $linkText, [System.String] $routeName, [System.Object] $routeValues, [System.Object] $htmlAttributes)
+		 4 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperLinkExtensions]::RouteLink($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'RouteLink' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>TextArea</Name>
+        <Script> switch ($args.Count) {
+				 # TextArea([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::TextArea($this,$args[0]) }
+
+				 # TextArea([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Object] $htmlAttributes)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::TextArea($this,$args[0],$args[1]) }
+
+				 # TextArea([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.String] $value, [System.Object] $htmlAttributes)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::TextArea($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'TextArea' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>TextBox</Name>
+        <Script> switch ($args.Count) {
+				 # TextBox([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::TextBox($this,$args[0]) }
+
+				 # TextBox([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Object] $value)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::TextBox($this,$args[0],$args[1]) }
+
+				 # TextBox([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.Object] $value, [System.String] $format)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperInputExtensions]::TextBox($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'TextBox' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ValidationMessage</Name>
+        <Script> switch ($args.Count) {
+				 # ValidationMessage([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValidationExtensions]::ValidationMessage($this,$args[0]) }
+
+				 # ValidationMessage([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.String] $message)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValidationExtensions]::ValidationMessage($this,$args[0],$args[1]) }
+
+				 # ValidationMessage([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression, [System.String] $message, [System.String] $tag)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValidationExtensions]::ValidationMessage($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'ValidationMessage' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ValidationSummary</Name>
+        <Script> switch ($args.Count) {
+				 # ValidationSummary([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValidationExtensions]::ValidationSummary($this) }
+
+				 # ValidationSummary([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.Boolean] $excludePropertyErrors)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValidationExtensions]::ValidationSummary($this,$args[0]) }
+
+				 # ValidationSummary([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $message, [System.String] $tag)
+		 2 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValidationExtensions]::ValidationSummary($this,$args[0],$args[1]) }
+
+				 # ValidationSummary([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $message, [System.Object] $htmlAttributes, [System.String] $tag)
+		 3 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValidationExtensions]::ValidationSummary($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'ValidationSummary' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Value</Name>
+        <Script> switch ($args.Count) {
+				 # Value([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValueExtensions]::Value($this,$args[0]) }
+
+		 default { throw "No overload for 'Value' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ValueForModel</Name>
+        <Script> switch ($args.Count) {
+				 # ValueForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValueExtensions]::ValueForModel($this) }
+
+				 # ValueForModel([Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper] $htmlHelper, [System.String] $format)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperValueExtensions]::ValueForModel($this,$args[0]) }
+
+		 default { throw "No overload for 'ValueForModel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

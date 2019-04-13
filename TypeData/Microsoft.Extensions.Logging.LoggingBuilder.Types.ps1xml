@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Logging.LoggingBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AddConfiguration</Name>
+        <Script> switch ($args.Count) {
+				 # AddConfiguration([Microsoft.Extensions.Logging.ILoggingBuilder] $builder)
+		 0 { [Microsoft.Extensions.Logging.Configuration.LoggingBuilderConfigurationExtensions]::AddConfiguration($this) }
+
+				 # AddConfiguration([Microsoft.Extensions.Logging.ILoggingBuilder] $builder, [Microsoft.Extensions.Configuration.IConfiguration] $configuration)
+		 1 { [Microsoft.Extensions.Logging.LoggingBuilderExtensions]::AddConfiguration($this,$args[0]) }
+
+		 default { throw "No overload for 'AddConfiguration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddConsole</Name>
+        <Script> switch ($args.Count) {
+				 # AddConsole([Microsoft.Extensions.Logging.ILoggingBuilder] $builder)
+		 0 { [Microsoft.Extensions.Logging.ConsoleLoggerExtensions]::AddConsole($this) }
+
+				 # AddConsole([Microsoft.Extensions.Logging.ILoggingBuilder] $builder, [System.Action`1[Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions]] $configure)
+		 1 { [Microsoft.Extensions.Logging.ConsoleLoggerExtensions]::AddConsole($this,$args[0]) }
+
+		 default { throw "No overload for 'AddConsole' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddDebug</Name>
+        <Script> switch ($args.Count) {
+				 # AddDebug([Microsoft.Extensions.Logging.ILoggingBuilder] $builder)
+		 0 { [Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions]::AddDebug($this) }
+
+		 default { throw "No overload for 'AddDebug' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddEventSourceLogger</Name>
+        <Script> switch ($args.Count) {
+				 # AddEventSourceLogger([Microsoft.Extensions.Logging.ILoggingBuilder] $builder)
+		 0 { [Microsoft.Extensions.Logging.EventSourceLoggerFactoryExtensions]::AddEventSourceLogger($this) }
+
+		 default { throw "No overload for 'AddEventSourceLogger' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddFilter</Name>
+        <Script> switch ($args.Count) {
+				 # AddFilter([Microsoft.Extensions.Logging.ILoggingBuilder] $builder, [System.Func`4[System.String,System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean]] $filter)
+		 1 { [Microsoft.Extensions.Logging.FilterLoggingBuilderExtensions]::AddFilter($this,$args[0]) }
+
+				 # AddFilter([Microsoft.Extensions.Logging.ILoggingBuilder] $builder, [System.String] $category, [Microsoft.Extensions.Logging.LogLevel] $level)
+		 2 { [Microsoft.Extensions.Logging.FilterLoggingBuilderExtensions]::AddFilter($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AddFilter' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddProvider</Name>
+        <Script> switch ($args.Count) {
+				 # AddProvider([Microsoft.Extensions.Logging.ILoggingBuilder] $builder, [Microsoft.Extensions.Logging.ILoggerProvider] $provider)
+		 1 { [Microsoft.Extensions.Logging.LoggingBuilderExtensions]::AddProvider($this,$args[0]) }
+
+		 default { throw "No overload for 'AddProvider' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddTraceSource</Name>
+        <Script> switch ($args.Count) {
+				 # AddTraceSource([Microsoft.Extensions.Logging.ILoggingBuilder] $builder, [System.String] $switchName)
+		 1 { [Microsoft.Extensions.Logging.TraceSourceFactoryExtensions]::AddTraceSource($this,$args[0]) }
+
+				 # AddTraceSource([Microsoft.Extensions.Logging.ILoggingBuilder] $builder, [System.String] $switchName, [System.Diagnostics.TraceListener] $listener)
+		 2 { [Microsoft.Extensions.Logging.TraceSourceFactoryExtensions]::AddTraceSource($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AddTraceSource' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ClearProviders</Name>
+        <Script> switch ($args.Count) {
+				 # ClearProviders([Microsoft.Extensions.Logging.ILoggingBuilder] $builder)
+		 0 { [Microsoft.Extensions.Logging.LoggingBuilderExtensions]::ClearProviders($this) }
+
+		 default { throw "No overload for 'ClearProviders' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetMinimumLevel</Name>
+        <Script> switch ($args.Count) {
+				 # SetMinimumLevel([Microsoft.Extensions.Logging.ILoggingBuilder] $builder, [Microsoft.Extensions.Logging.LogLevel] $level)
+		 1 { [Microsoft.Extensions.Logging.LoggingBuilderExtensions]::SetMinimumLevel($this,$args[0]) }
+
+		 default { throw "No overload for 'SetMinimumLevel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

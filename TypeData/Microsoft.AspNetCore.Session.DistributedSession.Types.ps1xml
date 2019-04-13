@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Session.DistributedSession</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Get</Name>
+        <Script> switch ($args.Count) {
+				 # Get([Microsoft.AspNetCore.Http.ISession] $session, [System.String] $key)
+		 1 { [Microsoft.AspNetCore.Http.SessionExtensions]::Get($this,$args[0]) }
+
+		 default { throw "No overload for 'Get' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetInt32</Name>
+        <Script> switch ($args.Count) {
+				 # GetInt32([Microsoft.AspNetCore.Http.ISession] $session, [System.String] $key)
+		 1 { [Microsoft.AspNetCore.Http.SessionExtensions]::GetInt32($this,$args[0]) }
+
+		 default { throw "No overload for 'GetInt32' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetString</Name>
+        <Script> switch ($args.Count) {
+				 # GetString([Microsoft.AspNetCore.Http.ISession] $session, [System.String] $key)
+		 1 { [Microsoft.AspNetCore.Http.SessionExtensions]::GetString($this,$args[0]) }
+
+		 default { throw "No overload for 'GetString' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetInt32</Name>
+        <Script> switch ($args.Count) {
+				 # SetInt32([Microsoft.AspNetCore.Http.ISession] $session, [System.String] $key, [System.Int32] $value)
+		 2 { [Microsoft.AspNetCore.Http.SessionExtensions]::SetInt32($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'SetInt32' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetString</Name>
+        <Script> switch ($args.Count) {
+				 # SetString([Microsoft.AspNetCore.Http.ISession] $session, [System.String] $key, [System.String] $value)
+		 2 { [Microsoft.AspNetCore.Http.SessionExtensions]::SetString($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'SetString' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

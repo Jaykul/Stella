@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>InvokeAsync</Name>
+        <Script> switch ($args.Count) {
+				 # InvokeAsync([Microsoft.AspNetCore.Mvc.IViewComponentHelper] $helper)
+		 0 { [Microsoft.AspNetCore.Mvc.Rendering.ViewComponentHelperExtensions]::InvokeAsync($this) }
+
+				 # InvokeAsync([Microsoft.AspNetCore.Mvc.IViewComponentHelper] $helper, [System.String] $name)
+		 1 { [Microsoft.AspNetCore.Mvc.Rendering.ViewComponentHelperExtensions]::InvokeAsync($this,$args[0]) }
+
+		 default { throw "No overload for 'InvokeAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

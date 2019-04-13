@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Builder.MvcApplicationBuilderExtensions+EndpointRouteBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>MapAreaRoute</Name>
+        <Script> switch ($args.Count) {
+				 # MapAreaRoute([Microsoft.AspNetCore.Routing.IRouteBuilder] $routeBuilder, [System.String] $name, [System.String] $areaName, [System.String] $template)
+		 3 { [Microsoft.AspNetCore.Builder.MvcAreaRouteBuilderExtensions]::MapAreaRoute($this,$args[0],$args[1],$args[2]) }
+
+				 # MapAreaRoute([Microsoft.AspNetCore.Routing.IRouteBuilder] $routeBuilder, [System.String] $name, [System.String] $areaName, [System.String] $template, [System.Object] $defaults)
+		 4 { [Microsoft.AspNetCore.Builder.MvcAreaRouteBuilderExtensions]::MapAreaRoute($this,$args[0],$args[1],$args[2],$args[3]) }
+
+				 # MapAreaRoute([Microsoft.AspNetCore.Routing.IRouteBuilder] $routeBuilder, [System.String] $name, [System.String] $areaName, [System.String] $template, [System.Object] $defaults, [System.Object] $constraints)
+		 5 { [Microsoft.AspNetCore.Builder.MvcAreaRouteBuilderExtensions]::MapAreaRoute($this,$args[0],$args[1],$args[2],$args[3],$args[4]) }
+
+				 # MapAreaRoute([Microsoft.AspNetCore.Routing.IRouteBuilder] $routeBuilder, [System.String] $name, [System.String] $areaName, [System.String] $template, [System.Object] $defaults, [System.Object] $constraints, [System.Object] $dataTokens)
+		 6 { [Microsoft.AspNetCore.Builder.MvcAreaRouteBuilderExtensions]::MapAreaRoute($this,$args[0],$args[1],$args[2],$args[3],$args[4],$args[5]) }
+
+		 default { throw "No overload for 'MapAreaRoute' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapDelete</Name>
+        <Script> switch ($args.Count) {
+				 # MapDelete([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [Microsoft.AspNetCore.Http.RequestDelegate] $handler)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapDelete($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapDelete' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapGet</Name>
+        <Script> switch ($args.Count) {
+				 # MapGet([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [Microsoft.AspNetCore.Http.RequestDelegate] $handler)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapGet($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapGet' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapMiddlewareDelete</Name>
+        <Script> switch ($args.Count) {
+				 # MapMiddlewareDelete([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $action)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapMiddlewareDelete($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapMiddlewareDelete' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapMiddlewareGet</Name>
+        <Script> switch ($args.Count) {
+				 # MapMiddlewareGet([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $action)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapMiddlewareGet($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapMiddlewareGet' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapMiddlewarePost</Name>
+        <Script> switch ($args.Count) {
+				 # MapMiddlewarePost([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $action)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapMiddlewarePost($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapMiddlewarePost' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapMiddlewarePut</Name>
+        <Script> switch ($args.Count) {
+				 # MapMiddlewarePut([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $action)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapMiddlewarePut($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapMiddlewarePut' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapMiddlewareRoute</Name>
+        <Script> switch ($args.Count) {
+				 # MapMiddlewareRoute([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $action)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapMiddlewareRoute($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapMiddlewareRoute' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapMiddlewareVerb</Name>
+        <Script> switch ($args.Count) {
+				 # MapMiddlewareVerb([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $verb, [System.String] $template, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $action)
+		 3 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapMiddlewareVerb($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'MapMiddlewareVerb' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapPost</Name>
+        <Script> switch ($args.Count) {
+				 # MapPost([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [Microsoft.AspNetCore.Http.RequestDelegate] $handler)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapPost($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapPost' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapPut</Name>
+        <Script> switch ($args.Count) {
+				 # MapPut([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [Microsoft.AspNetCore.Http.RequestDelegate] $handler)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapPut($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapPut' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapRoute</Name>
+        <Script> switch ($args.Count) {
+				 # MapRoute([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $template, [Microsoft.AspNetCore.Http.RequestDelegate] $handler)
+		 2 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapRoute($this,$args[0],$args[1]) }
+
+				 # MapRoute([Microsoft.AspNetCore.Routing.IRouteBuilder] $routeBuilder, [System.String] $name, [System.String] $template, [System.Object] $defaults)
+		 3 { [Microsoft.AspNetCore.Builder.MapRouteRouteBuilderExtensions]::MapRoute($this,$args[0],$args[1],$args[2]) }
+
+				 # MapRoute([Microsoft.AspNetCore.Routing.IRouteBuilder] $routeBuilder, [System.String] $name, [System.String] $template, [System.Object] $defaults, [System.Object] $constraints)
+		 4 { [Microsoft.AspNetCore.Builder.MapRouteRouteBuilderExtensions]::MapRoute($this,$args[0],$args[1],$args[2],$args[3]) }
+
+				 # MapRoute([Microsoft.AspNetCore.Routing.IRouteBuilder] $routeBuilder, [System.String] $name, [System.String] $template, [System.Object] $defaults, [System.Object] $constraints, [System.Object] $dataTokens)
+		 5 { [Microsoft.AspNetCore.Builder.MapRouteRouteBuilderExtensions]::MapRoute($this,$args[0],$args[1],$args[2],$args[3],$args[4]) }
+
+		 default { throw "No overload for 'MapRoute' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapVerb</Name>
+        <Script> switch ($args.Count) {
+				 # MapVerb([Microsoft.AspNetCore.Routing.IRouteBuilder] $builder, [System.String] $verb, [System.String] $template, [System.Func`4[Microsoft.AspNetCore.Http.HttpRequest,Microsoft.AspNetCore.Http.HttpResponse,Microsoft.AspNetCore.Routing.RouteData,System.Threading.Tasks.Task]] $handler)
+		 3 { [Microsoft.AspNetCore.Routing.RequestDelegateRouteBuilderExtensions]::MapVerb($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'MapVerb' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

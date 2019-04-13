@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Builder.Internal.ApplicationBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Map</Name>
+        <Script> switch ($args.Count) {
+				 # Map([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Http.PathString] $pathMatch, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $configuration)
+		 2 { [Microsoft.AspNetCore.Builder.MapExtensions]::Map($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Map' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MapWhen</Name>
+        <Script> switch ($args.Count) {
+				 # MapWhen([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.Func`2[Microsoft.AspNetCore.Http.HttpContext,System.Boolean]] $predicate, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $configuration)
+		 2 { [Microsoft.AspNetCore.Builder.MapWhenExtensions]::MapWhen($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'MapWhen' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Run</Name>
+        <Script> switch ($args.Count) {
+				 # Run([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Http.RequestDelegate] $handler)
+		 1 { [Microsoft.AspNetCore.Builder.RunExtensions]::Run($this,$args[0]) }
+
+		 default { throw "No overload for 'Run' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Use</Name>
+        <Script> switch ($args.Count) {
+				 # Use([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.Func`3[Microsoft.AspNetCore.Http.HttpContext,System.Func`1[System.Threading.Tasks.Task],System.Threading.Tasks.Task]] $middleware)
+		 1 { [Microsoft.AspNetCore.Builder.UseExtensions]::Use($this,$args[0]) }
+
+		 default { throw "No overload for 'Use' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseAuthentication</Name>
+        <Script> switch ($args.Count) {
+				 # UseAuthentication([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.AuthAppBuilderExtensions]::UseAuthentication($this) }
+
+		 default { throw "No overload for 'UseAuthentication' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseCookieAuthentication</Name>
+        <Script> switch ($args.Count) {
+				 # UseCookieAuthentication([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.CookieAppBuilderExtensions]::UseCookieAuthentication($this) }
+
+				 # UseCookieAuthentication([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions] $options)
+		 1 { [Microsoft.AspNetCore.Builder.CookieAppBuilderExtensions]::UseCookieAuthentication($this,$args[0]) }
+
+		 default { throw "No overload for 'UseCookieAuthentication' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseCookiePolicy</Name>
+        <Script> switch ($args.Count) {
+				 # UseCookiePolicy([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.CookiePolicyAppBuilderExtensions]::UseCookiePolicy($this) }
+
+				 # UseCookiePolicy([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Builder.CookiePolicyOptions] $options)
+		 1 { [Microsoft.AspNetCore.Builder.CookiePolicyAppBuilderExtensions]::UseCookiePolicy($this,$args[0]) }
+
+		 default { throw "No overload for 'UseCookiePolicy' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseCors</Name>
+        <Script> switch ($args.Count) {
+				 # UseCors([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.CorsMiddlewareExtensions]::UseCors($this) }
+
+				 # UseCors([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.String] $policyName)
+		 1 { [Microsoft.AspNetCore.Builder.CorsMiddlewareExtensions]::UseCors($this,$args[0]) }
+
+		 default { throw "No overload for 'UseCors' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseDefaultFiles</Name>
+        <Script> switch ($args.Count) {
+				 # UseDefaultFiles([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.DefaultFilesExtensions]::UseDefaultFiles($this) }
+
+				 # UseDefaultFiles([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.String] $requestPath)
+		 1 { [Microsoft.AspNetCore.Builder.DefaultFilesExtensions]::UseDefaultFiles($this,$args[0]) }
+
+		 default { throw "No overload for 'UseDefaultFiles' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseDeveloperExceptionPage</Name>
+        <Script> switch ($args.Count) {
+				 # UseDeveloperExceptionPage([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.DeveloperExceptionPageExtensions]::UseDeveloperExceptionPage($this) }
+
+				 # UseDeveloperExceptionPage([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Builder.DeveloperExceptionPageOptions] $options)
+		 1 { [Microsoft.AspNetCore.Builder.DeveloperExceptionPageExtensions]::UseDeveloperExceptionPage($this,$args[0]) }
+
+		 default { throw "No overload for 'UseDeveloperExceptionPage' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseDirectoryBrowser</Name>
+        <Script> switch ($args.Count) {
+				 # UseDirectoryBrowser([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.DirectoryBrowserExtensions]::UseDirectoryBrowser($this) }
+
+				 # UseDirectoryBrowser([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.String] $requestPath)
+		 1 { [Microsoft.AspNetCore.Builder.DirectoryBrowserExtensions]::UseDirectoryBrowser($this,$args[0]) }
+
+		 default { throw "No overload for 'UseDirectoryBrowser' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseEndpoint</Name>
+        <Script> switch ($args.Count) {
+				 # UseEndpoint([Microsoft.AspNetCore.Builder.IApplicationBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.Internal.EndpointRoutingApplicationBuilderExtensions]::UseEndpoint($this) }
+
+		 default { throw "No overload for 'UseEndpoint' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseEndpointRouting</Name>
+        <Script> switch ($args.Count) {
+				 # UseEndpointRouting([Microsoft.AspNetCore.Builder.IApplicationBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.Internal.EndpointRoutingApplicationBuilderExtensions]::UseEndpointRouting($this) }
+
+		 default { throw "No overload for 'UseEndpointRouting' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseExceptionHandler</Name>
+        <Script> switch ($args.Count) {
+				 # UseExceptionHandler([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions]::UseExceptionHandler($this) }
+
+				 # UseExceptionHandler([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.String] $errorHandlingPath)
+		 1 { [Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions]::UseExceptionHandler($this,$args[0]) }
+
+		 default { throw "No overload for 'UseExceptionHandler' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseFileServer</Name>
+        <Script> switch ($args.Count) {
+				 # UseFileServer([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.FileServerExtensions]::UseFileServer($this) }
+
+				 # UseFileServer([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.Boolean] $enableDirectoryBrowsing)
+		 1 { [Microsoft.AspNetCore.Builder.FileServerExtensions]::UseFileServer($this,$args[0]) }
+
+		 default { throw "No overload for 'UseFileServer' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseForwardedHeaders</Name>
+        <Script> switch ($args.Count) {
+				 # UseForwardedHeaders([Microsoft.AspNetCore.Builder.IApplicationBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.Builder.ForwardedHeadersExtensions]::UseForwardedHeaders($this) }
+
+				 # UseForwardedHeaders([Microsoft.AspNetCore.Builder.IApplicationBuilder] $builder, [Microsoft.AspNetCore.Builder.ForwardedHeadersOptions] $options)
+		 1 { [Microsoft.AspNetCore.Builder.ForwardedHeadersExtensions]::UseForwardedHeaders($this,$args[0]) }
+
+		 default { throw "No overload for 'UseForwardedHeaders' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseHsts</Name>
+        <Script> switch ($args.Count) {
+				 # UseHsts([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.HstsBuilderExtensions]::UseHsts($this) }
+
+		 default { throw "No overload for 'UseHsts' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseHttpMethodOverride</Name>
+        <Script> switch ($args.Count) {
+				 # UseHttpMethodOverride([Microsoft.AspNetCore.Builder.IApplicationBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.Builder.HttpMethodOverrideExtensions]::UseHttpMethodOverride($this) }
+
+				 # UseHttpMethodOverride([Microsoft.AspNetCore.Builder.IApplicationBuilder] $builder, [Microsoft.AspNetCore.Builder.HttpMethodOverrideOptions] $options)
+		 1 { [Microsoft.AspNetCore.Builder.HttpMethodOverrideExtensions]::UseHttpMethodOverride($this,$args[0]) }
+
+		 default { throw "No overload for 'UseHttpMethodOverride' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseHttpsRedirection</Name>
+        <Script> switch ($args.Count) {
+				 # UseHttpsRedirection([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions]::UseHttpsRedirection($this) }
+
+		 default { throw "No overload for 'UseHttpsRedirection' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseIdentity</Name>
+        <Script> switch ($args.Count) {
+				 # UseIdentity([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.BuilderExtensions]::UseIdentity($this) }
+
+		 default { throw "No overload for 'UseIdentity' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseMiddleware</Name>
+        <Script> switch ($args.Count) {
+				 # UseMiddleware([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.Object[]] $args)
+		 1 { [Microsoft.AspNetCore.Builder.UseMiddlewareExtensions]::UseMiddleware($this,$args[0]) }
+
+				 # UseMiddleware([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.Type] $middleware, [System.Object[]] $args)
+		 2 { [Microsoft.AspNetCore.Builder.UseMiddlewareExtensions]::UseMiddleware($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'UseMiddleware' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseMvc</Name>
+        <Script> switch ($args.Count) {
+				 # UseMvc([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.MvcApplicationBuilderExtensions]::UseMvc($this) }
+
+				 # UseMvc([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.Action`1[Microsoft.AspNetCore.Routing.IRouteBuilder]] $configureRoutes)
+		 1 { [Microsoft.AspNetCore.Builder.MvcApplicationBuilderExtensions]::UseMvc($this,$args[0]) }
+
+		 default { throw "No overload for 'UseMvc' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseMvcWithDefaultRoute</Name>
+        <Script> switch ($args.Count) {
+				 # UseMvcWithDefaultRoute([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.MvcApplicationBuilderExtensions]::UseMvcWithDefaultRoute($this) }
+
+		 default { throw "No overload for 'UseMvcWithDefaultRoute' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UsePathBase</Name>
+        <Script> switch ($args.Count) {
+				 # UsePathBase([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Http.PathString] $pathBase)
+		 1 { [Microsoft.AspNetCore.Builder.UsePathBaseExtensions]::UsePathBase($this,$args[0]) }
+
+		 default { throw "No overload for 'UsePathBase' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseResponseCaching</Name>
+        <Script> switch ($args.Count) {
+				 # UseResponseCaching([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.ResponseCachingExtensions]::UseResponseCaching($this) }
+
+		 default { throw "No overload for 'UseResponseCaching' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseResponseCompression</Name>
+        <Script> switch ($args.Count) {
+				 # UseResponseCompression([Microsoft.AspNetCore.Builder.IApplicationBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.Builder.ResponseCompressionBuilderExtensions]::UseResponseCompression($this) }
+
+		 default { throw "No overload for 'UseResponseCompression' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseRewriter</Name>
+        <Script> switch ($args.Count) {
+				 # UseRewriter([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.RewriteBuilderExtensions]::UseRewriter($this) }
+
+				 # UseRewriter([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Rewrite.RewriteOptions] $options)
+		 1 { [Microsoft.AspNetCore.Builder.RewriteBuilderExtensions]::UseRewriter($this,$args[0]) }
+
+		 default { throw "No overload for 'UseRewriter' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseRouter</Name>
+        <Script> switch ($args.Count) {
+				 # UseRouter([Microsoft.AspNetCore.Builder.IApplicationBuilder] $builder, [Microsoft.AspNetCore.Routing.IRouter] $router)
+		 1 { [Microsoft.AspNetCore.Builder.RoutingBuilderExtensions]::UseRouter($this,$args[0]) }
+
+		 default { throw "No overload for 'UseRouter' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseSession</Name>
+        <Script> switch ($args.Count) {
+				 # UseSession([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.SessionMiddlewareExtensions]::UseSession($this) }
+
+				 # UseSession([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Builder.SessionOptions] $options)
+		 1 { [Microsoft.AspNetCore.Builder.SessionMiddlewareExtensions]::UseSession($this,$args[0]) }
+
+		 default { throw "No overload for 'UseSession' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseStaticFiles</Name>
+        <Script> switch ($args.Count) {
+				 # UseStaticFiles([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.StaticFileExtensions]::UseStaticFiles($this) }
+
+				 # UseStaticFiles([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.String] $requestPath)
+		 1 { [Microsoft.AspNetCore.Builder.StaticFileExtensions]::UseStaticFiles($this,$args[0]) }
+
+		 default { throw "No overload for 'UseStaticFiles' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseStatusCodePages</Name>
+        <Script> switch ($args.Count) {
+				 # UseStatusCodePages([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.StatusCodePagesExtensions]::UseStatusCodePages($this) }
+
+				 # UseStatusCodePages([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Builder.StatusCodePagesOptions] $options)
+		 1 { [Microsoft.AspNetCore.Builder.StatusCodePagesExtensions]::UseStatusCodePages($this,$args[0]) }
+
+				 # UseStatusCodePages([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.String] $contentType, [System.String] $bodyFormat)
+		 2 { [Microsoft.AspNetCore.Builder.StatusCodePagesExtensions]::UseStatusCodePages($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'UseStatusCodePages' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseStatusCodePagesWithRedirects</Name>
+        <Script> switch ($args.Count) {
+				 # UseStatusCodePagesWithRedirects([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.String] $locationFormat)
+		 1 { [Microsoft.AspNetCore.Builder.StatusCodePagesExtensions]::UseStatusCodePagesWithRedirects($this,$args[0]) }
+
+		 default { throw "No overload for 'UseStatusCodePagesWithRedirects' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseStatusCodePagesWithReExecute</Name>
+        <Script> switch ($args.Count) {
+				 # UseStatusCodePagesWithReExecute([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.String] $pathFormat, [System.String] $queryFormat)
+		 2 { [Microsoft.AspNetCore.Builder.StatusCodePagesExtensions]::UseStatusCodePagesWithReExecute($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'UseStatusCodePagesWithReExecute' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseWelcomePage</Name>
+        <Script> switch ($args.Count) {
+				 # UseWelcomePage([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app)
+		 0 { [Microsoft.AspNetCore.Builder.WelcomePageExtensions]::UseWelcomePage($this) }
+
+				 # UseWelcomePage([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [Microsoft.AspNetCore.Builder.WelcomePageOptions] $options)
+		 1 { [Microsoft.AspNetCore.Builder.WelcomePageExtensions]::UseWelcomePage($this,$args[0]) }
+
+		 default { throw "No overload for 'UseWelcomePage' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseWhen</Name>
+        <Script> switch ($args.Count) {
+				 # UseWhen([Microsoft.AspNetCore.Builder.IApplicationBuilder] $app, [System.Func`2[Microsoft.AspNetCore.Http.HttpContext,System.Boolean]] $predicate, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $configuration)
+		 2 { [Microsoft.AspNetCore.Builder.UseWhenExtensions]::UseWhen($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'UseWhen' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

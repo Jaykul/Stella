@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.DataProtection.TimeLimitedDataProtector</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Protect</Name>
+        <Script> switch ($args.Count) {
+				 # Protect([Microsoft.AspNetCore.DataProtection.ITimeLimitedDataProtector] $protector, [System.Byte[]] $plaintext, [System.TimeSpan] $lifetime)
+		 2 { [Microsoft.AspNetCore.DataProtection.DataProtectionAdvancedExtensions]::Protect($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Protect' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Unprotect</Name>
+        <Script> switch ($args.Count) {
+				 # Unprotect([Microsoft.AspNetCore.DataProtection.ITimeLimitedDataProtector] $protector, [System.String] $protectedData, [System.DateTimeOffset&amp;] $expiration)
+		 2 { [Microsoft.AspNetCore.DataProtection.DataProtectionAdvancedExtensions]::Unprotect($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Unprotect' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

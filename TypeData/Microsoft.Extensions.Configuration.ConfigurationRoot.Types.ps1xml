@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Configuration.ConfigurationRoot</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AsEnumerable</Name>
+        <Script> switch ($args.Count) {
+				 # AsEnumerable([Microsoft.Extensions.Configuration.IConfiguration] $configuration)
+		 0 { [Microsoft.Extensions.Configuration.ConfigurationExtensions]::AsEnumerable($this) }
+
+				 # AsEnumerable([Microsoft.Extensions.Configuration.IConfiguration] $configuration, [System.Boolean] $makePathsRelative)
+		 1 { [Microsoft.Extensions.Configuration.ConfigurationExtensions]::AsEnumerable($this,$args[0]) }
+
+		 default { throw "No overload for 'AsEnumerable' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Bind</Name>
+        <Script> switch ($args.Count) {
+				 # Bind([Microsoft.Extensions.Configuration.IConfiguration] $configuration, [System.Object] $instance)
+		 1 { [Microsoft.Extensions.Configuration.ConfigurationBinder]::Bind($this,$args[0]) }
+
+				 # Bind([Microsoft.Extensions.Configuration.IConfiguration] $configuration, [System.String] $key, [System.Object] $instance)
+		 2 { [Microsoft.Extensions.Configuration.ConfigurationBinder]::Bind($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Bind' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Get</Name>
+        <Script> switch ($args.Count) {
+				 # Get([Microsoft.Extensions.Configuration.IConfiguration] $configuration)
+		 0 { [Microsoft.Extensions.Configuration.ConfigurationBinder]::Get($this) }
+
+				 # Get([Microsoft.Extensions.Configuration.IConfiguration] $configuration, [System.Action`1[Microsoft.Extensions.Configuration.BinderOptions]] $configureOptions)
+		 1 { [Microsoft.Extensions.Configuration.ConfigurationBinder]::Get($this,$args[0]) }
+
+				 # Get([Microsoft.Extensions.Configuration.IConfiguration] $configuration, [System.Type] $type, [System.Action`1[Microsoft.Extensions.Configuration.BinderOptions]] $configureOptions)
+		 2 { [Microsoft.Extensions.Configuration.ConfigurationBinder]::Get($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Get' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetConnectionString</Name>
+        <Script> switch ($args.Count) {
+				 # GetConnectionString([Microsoft.Extensions.Configuration.IConfiguration] $configuration, [System.String] $name)
+		 1 { [Microsoft.Extensions.Configuration.ConfigurationExtensions]::GetConnectionString($this,$args[0]) }
+
+		 default { throw "No overload for 'GetConnectionString' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetValue</Name>
+        <Script> switch ($args.Count) {
+				 # GetValue([Microsoft.Extensions.Configuration.IConfiguration] $configuration, [System.String] $key)
+		 1 { [Microsoft.Extensions.Configuration.ConfigurationBinder]::GetValue($this,$args[0]) }
+
+				 # GetValue([Microsoft.Extensions.Configuration.IConfiguration] $configuration, [System.String] $key, [T] $defaultValue)
+		 2 { [Microsoft.Extensions.Configuration.ConfigurationBinder]::GetValue($this,$args[0],$args[1]) }
+
+				 # GetValue([Microsoft.Extensions.Configuration.IConfiguration] $configuration, [System.Type] $type, [System.String] $key, [System.Object] $defaultValue)
+		 3 { [Microsoft.Extensions.Configuration.ConfigurationBinder]::GetValue($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'GetValue' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

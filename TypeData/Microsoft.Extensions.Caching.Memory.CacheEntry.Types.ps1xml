@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Caching.Memory.CacheEntry</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AddExpirationToken</Name>
+        <Script> switch ($args.Count) {
+				 # AddExpirationToken([Microsoft.Extensions.Caching.Memory.ICacheEntry] $entry, [Microsoft.Extensions.Primitives.IChangeToken] $expirationToken)
+		 1 { [Microsoft.Extensions.Caching.Memory.CacheEntryExtensions]::AddExpirationToken($this,$args[0]) }
+
+		 default { throw "No overload for 'AddExpirationToken' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RegisterPostEvictionCallback</Name>
+        <Script> switch ($args.Count) {
+				 # RegisterPostEvictionCallback([Microsoft.Extensions.Caching.Memory.ICacheEntry] $entry, [Microsoft.Extensions.Caching.Memory.PostEvictionDelegate] $callback)
+		 1 { [Microsoft.Extensions.Caching.Memory.CacheEntryExtensions]::RegisterPostEvictionCallback($this,$args[0]) }
+
+				 # RegisterPostEvictionCallback([Microsoft.Extensions.Caching.Memory.ICacheEntry] $entry, [Microsoft.Extensions.Caching.Memory.PostEvictionDelegate] $callback, [System.Object] $state)
+		 2 { [Microsoft.Extensions.Caching.Memory.CacheEntryExtensions]::RegisterPostEvictionCallback($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'RegisterPostEvictionCallback' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetAbsoluteExpiration</Name>
+        <Script> switch ($args.Count) {
+				 # SetAbsoluteExpiration([Microsoft.Extensions.Caching.Memory.ICacheEntry] $entry, [System.TimeSpan] $relative)
+		 1 { [Microsoft.Extensions.Caching.Memory.CacheEntryExtensions]::SetAbsoluteExpiration($this,$args[0]) }
+
+		 default { throw "No overload for 'SetAbsoluteExpiration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetOptions</Name>
+        <Script> switch ($args.Count) {
+				 # SetOptions([Microsoft.Extensions.Caching.Memory.ICacheEntry] $entry, [Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions] $options)
+		 1 { [Microsoft.Extensions.Caching.Memory.CacheEntryExtensions]::SetOptions($this,$args[0]) }
+
+		 default { throw "No overload for 'SetOptions' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetPriority</Name>
+        <Script> switch ($args.Count) {
+				 # SetPriority([Microsoft.Extensions.Caching.Memory.ICacheEntry] $entry, [Microsoft.Extensions.Caching.Memory.CacheItemPriority] $priority)
+		 1 { [Microsoft.Extensions.Caching.Memory.CacheEntryExtensions]::SetPriority($this,$args[0]) }
+
+		 default { throw "No overload for 'SetPriority' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetSize</Name>
+        <Script> switch ($args.Count) {
+				 # SetSize([Microsoft.Extensions.Caching.Memory.ICacheEntry] $entry, [System.Int64] $size)
+		 1 { [Microsoft.Extensions.Caching.Memory.CacheEntryExtensions]::SetSize($this,$args[0]) }
+
+		 default { throw "No overload for 'SetSize' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetSlidingExpiration</Name>
+        <Script> switch ($args.Count) {
+				 # SetSlidingExpiration([Microsoft.Extensions.Caching.Memory.ICacheEntry] $entry, [System.TimeSpan] $offset)
+		 1 { [Microsoft.Extensions.Caching.Memory.CacheEntryExtensions]::SetSlidingExpiration($this,$args[0]) }
+
+		 default { throw "No overload for 'SetSlidingExpiration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetValue</Name>
+        <Script> switch ($args.Count) {
+				 # SetValue([Microsoft.Extensions.Caching.Memory.ICacheEntry] $entry, [System.Object] $value)
+		 1 { [Microsoft.Extensions.Caching.Memory.CacheEntryExtensions]::SetValue($this,$args[0]) }
+
+		 default { throw "No overload for 'SetValue' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

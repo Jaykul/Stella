@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Hosting.HostBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>ConfigureAppConfiguration</Name>
+        <Script> switch ($args.Count) {
+				 # ConfigureAppConfiguration([Microsoft.Extensions.Hosting.IHostBuilder] $hostBuilder, [System.Action`1[Microsoft.Extensions.Configuration.IConfigurationBuilder]] $configureDelegate)
+		 1 { [Microsoft.Extensions.Hosting.HostingHostBuilderExtensions]::ConfigureAppConfiguration($this,$args[0]) }
+
+		 default { throw "No overload for 'ConfigureAppConfiguration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ConfigureContainer</Name>
+        <Script> switch ($args.Count) {
+				 # ConfigureContainer([Microsoft.Extensions.Hosting.IHostBuilder] $hostBuilder, [System.Action`1[TContainerBuilder]] $configureDelegate)
+		 1 { [Microsoft.Extensions.Hosting.HostingHostBuilderExtensions]::ConfigureContainer($this,$args[0]) }
+
+		 default { throw "No overload for 'ConfigureContainer' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ConfigureLogging</Name>
+        <Script> switch ($args.Count) {
+				 # ConfigureLogging([Microsoft.Extensions.Hosting.IHostBuilder] $hostBuilder, [System.Action`2[Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.Logging.ILoggingBuilder]] $configureLogging)
+		 1 { [Microsoft.Extensions.Hosting.HostingHostBuilderExtensions]::ConfigureLogging($this,$args[0]) }
+
+		 default { throw "No overload for 'ConfigureLogging' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ConfigureServices</Name>
+        <Script> switch ($args.Count) {
+				 # ConfigureServices([Microsoft.Extensions.Hosting.IHostBuilder] $hostBuilder, [System.Action`1[Microsoft.Extensions.DependencyInjection.IServiceCollection]] $configureDelegate)
+		 1 { [Microsoft.Extensions.Hosting.HostingHostBuilderExtensions]::ConfigureServices($this,$args[0]) }
+
+		 default { throw "No overload for 'ConfigureServices' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RunConsoleAsync</Name>
+        <Script> switch ($args.Count) {
+				 # RunConsoleAsync([Microsoft.Extensions.Hosting.IHostBuilder] $hostBuilder, [System.Threading.CancellationToken] $cancellationToken)
+		 1 { [Microsoft.Extensions.Hosting.HostingHostBuilderExtensions]::RunConsoleAsync($this,$args[0]) }
+
+		 default { throw "No overload for 'RunConsoleAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Start</Name>
+        <Script> switch ($args.Count) {
+				 # Start([Microsoft.Extensions.Hosting.IHostBuilder] $hostBuilder)
+		 0 { [Microsoft.Extensions.Hosting.HostingAbstractionsHostBuilderExtensions]::Start($this) }
+
+		 default { throw "No overload for 'Start' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseConsoleLifetime</Name>
+        <Script> switch ($args.Count) {
+				 # UseConsoleLifetime([Microsoft.Extensions.Hosting.IHostBuilder] $hostBuilder)
+		 0 { [Microsoft.Extensions.Hosting.HostingHostBuilderExtensions]::UseConsoleLifetime($this) }
+
+		 default { throw "No overload for 'UseConsoleLifetime' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseContentRoot</Name>
+        <Script> switch ($args.Count) {
+				 # UseContentRoot([Microsoft.Extensions.Hosting.IHostBuilder] $hostBuilder, [System.String] $contentRoot)
+		 1 { [Microsoft.Extensions.Hosting.HostingHostBuilderExtensions]::UseContentRoot($this,$args[0]) }
+
+		 default { throw "No overload for 'UseContentRoot' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseEnvironment</Name>
+        <Script> switch ($args.Count) {
+				 # UseEnvironment([Microsoft.Extensions.Hosting.IHostBuilder] $hostBuilder, [System.String] $environment)
+		 1 { [Microsoft.Extensions.Hosting.HostingHostBuilderExtensions]::UseEnvironment($this,$args[0]) }
+
+		 default { throw "No overload for 'UseEnvironment' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.DataProtection.Internal.DataProtectionBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AddKeyEscrowSink</Name>
+        <Script> switch ($args.Count) {
+				 # AddKeyEscrowSink([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::AddKeyEscrowSink($this) }
+
+				 # AddKeyEscrowSink([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [Microsoft.AspNetCore.DataProtection.KeyManagement.IKeyEscrowSink] $sink)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::AddKeyEscrowSink($this,$args[0]) }
+
+		 default { throw "No overload for 'AddKeyEscrowSink' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddKeyManagementOptions</Name>
+        <Script> switch ($args.Count) {
+				 # AddKeyManagementOptions([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [System.Action`1[Microsoft.AspNetCore.DataProtection.KeyManagement.KeyManagementOptions]] $setupAction)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::AddKeyManagementOptions($this,$args[0]) }
+
+		 default { throw "No overload for 'AddKeyManagementOptions' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>DisableAutomaticKeyGeneration</Name>
+        <Script> switch ($args.Count) {
+				 # DisableAutomaticKeyGeneration([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::DisableAutomaticKeyGeneration($this) }
+
+		 default { throw "No overload for 'DisableAutomaticKeyGeneration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>PersistKeysToFileSystem</Name>
+        <Script> switch ($args.Count) {
+				 # PersistKeysToFileSystem([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [System.IO.DirectoryInfo] $directory)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::PersistKeysToFileSystem($this,$args[0]) }
+
+		 default { throw "No overload for 'PersistKeysToFileSystem' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>PersistKeysToRegistry</Name>
+        <Script> switch ($args.Count) {
+				 # PersistKeysToRegistry([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [Microsoft.Win32.RegistryKey] $registryKey)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::PersistKeysToRegistry($this,$args[0]) }
+
+		 default { throw "No overload for 'PersistKeysToRegistry' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ProtectKeysWithCertificate</Name>
+        <Script> switch ($args.Count) {
+				 # ProtectKeysWithCertificate([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [System.Security.Cryptography.X509Certificates.X509Certificate2] $certificate)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::ProtectKeysWithCertificate($this,$args[0]) }
+
+		 default { throw "No overload for 'ProtectKeysWithCertificate' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ProtectKeysWithDpapi</Name>
+        <Script> switch ($args.Count) {
+				 # ProtectKeysWithDpapi([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::ProtectKeysWithDpapi($this) }
+
+				 # ProtectKeysWithDpapi([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [System.Boolean] $protectToLocalMachine)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::ProtectKeysWithDpapi($this,$args[0]) }
+
+		 default { throw "No overload for 'ProtectKeysWithDpapi' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ProtectKeysWithDpapiNG</Name>
+        <Script> switch ($args.Count) {
+				 # ProtectKeysWithDpapiNG([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::ProtectKeysWithDpapiNG($this) }
+
+				 # ProtectKeysWithDpapiNG([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [System.String] $protectionDescriptorRule, [Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiNGProtectionDescriptorFlags] $flags)
+		 2 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::ProtectKeysWithDpapiNG($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ProtectKeysWithDpapiNG' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetApplicationName</Name>
+        <Script> switch ($args.Count) {
+				 # SetApplicationName([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [System.String] $applicationName)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::SetApplicationName($this,$args[0]) }
+
+		 default { throw "No overload for 'SetApplicationName' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetDefaultKeyLifetime</Name>
+        <Script> switch ($args.Count) {
+				 # SetDefaultKeyLifetime([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [System.TimeSpan] $lifetime)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::SetDefaultKeyLifetime($this,$args[0]) }
+
+		 default { throw "No overload for 'SetDefaultKeyLifetime' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UnprotectKeysWithAnyCertificate</Name>
+        <Script> switch ($args.Count) {
+				 # UnprotectKeysWithAnyCertificate([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [System.Security.Cryptography.X509Certificates.X509Certificate2[]] $certificates)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::UnprotectKeysWithAnyCertificate($this,$args[0]) }
+
+		 default { throw "No overload for 'UnprotectKeysWithAnyCertificate' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseCryptographicAlgorithms</Name>
+        <Script> switch ($args.Count) {
+				 # UseCryptographicAlgorithms([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorConfiguration] $configuration)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::UseCryptographicAlgorithms($this,$args[0]) }
+
+		 default { throw "No overload for 'UseCryptographicAlgorithms' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseCustomCryptographicAlgorithms</Name>
+        <Script> switch ($args.Count) {
+				 # UseCustomCryptographicAlgorithms([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder, [Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.CngCbcAuthenticatedEncryptorConfiguration] $configuration)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::UseCustomCryptographicAlgorithms($this,$args[0]) }
+
+		 default { throw "No overload for 'UseCustomCryptographicAlgorithms' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseEphemeralDataProtectionProvider</Name>
+        <Script> switch ($args.Count) {
+				 # UseEphemeralDataProtectionProvider([Microsoft.AspNetCore.DataProtection.IDataProtectionBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.DataProtection.DataProtectionBuilderExtensions]::UseEphemeralDataProtectionProvider($this) }
+
+		 default { throw "No overload for 'UseEphemeralDataProtectionProvider' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>
