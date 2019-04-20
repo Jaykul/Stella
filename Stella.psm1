@@ -34,6 +34,8 @@ $webroot = Join-Path $PSScriptRoot Web
 [Route("api/[controller]")]
 class DateController : ControllerBase {
     
+    $DefaultRunspace = [RunspaceFactory]::CreateRunspace()
+    
     DateController() {}
     
     [HttpGet()]
@@ -41,7 +43,18 @@ class DateController : ControllerBase {
         Write-Host "[DateController] Invoking method Date() " -Foreground White -Background Green
         return [DateTimeOffset]::UtcNow
     }
+
+    [HttpGet("/home")] 
+    [ContentResult] Index() {        
+        [Runspace]::DefaultRunspace = $this.DefaultRunspace
+        Write-Host "[HomeController] Index" -ForegroundColor White -BackgroundColor DarkMagenta
+        return [ContentResult]@{
+            Content = ( Get-ChildItem -Path ~ | ConvertTo-Html -As Table )
+            ContentType = "text/html"
+        }
+    }
 }
+
 
 # Manages the parts and features of an MVC application.
 class PowerShellPartManager : ApplicationPartManager {
