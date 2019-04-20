@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Hosting.WebHostBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>CaptureStartupErrors</Name>
+        <Script> switch ($args.Count) {
+				 # CaptureStartupErrors([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Boolean] $captureStartupErrors)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::CaptureStartupErrors($this,$args[0]) }
+
+		 default { throw "No overload for 'CaptureStartupErrors' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Configure</Name>
+        <Script> switch ($args.Count) {
+				 # Configure([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Action`1[Microsoft.AspNetCore.Builder.IApplicationBuilder]] $configureApp)
+		 1 { [Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions]::Configure($this,$args[0]) }
+
+		 default { throw "No overload for 'Configure' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ConfigureAppConfiguration</Name>
+        <Script> switch ($args.Count) {
+				 # ConfigureAppConfiguration([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Action`1[Microsoft.Extensions.Configuration.IConfigurationBuilder]] $configureDelegate)
+		 1 { [Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions]::ConfigureAppConfiguration($this,$args[0]) }
+
+		 default { throw "No overload for 'ConfigureAppConfiguration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ConfigureKestrel</Name>
+        <Script> switch ($args.Count) {
+				 # ConfigureKestrel([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Action`1[Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions]] $options)
+		 1 { [Microsoft.AspNetCore.Hosting.WebHostBuilderKestrelExtensions]::ConfigureKestrel($this,$args[0]) }
+
+		 default { throw "No overload for 'ConfigureKestrel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ConfigureLogging</Name>
+        <Script> switch ($args.Count) {
+				 # ConfigureLogging([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Action`1[Microsoft.Extensions.Logging.ILoggingBuilder]] $configureLogging)
+		 1 { [Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions]::ConfigureLogging($this,$args[0]) }
+
+		 default { throw "No overload for 'ConfigureLogging' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>PreferHostingUrls</Name>
+        <Script> switch ($args.Count) {
+				 # PreferHostingUrls([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Boolean] $preferHostingUrls)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::PreferHostingUrls($this,$args[0]) }
+
+		 default { throw "No overload for 'PreferHostingUrls' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Start</Name>
+        <Script> switch ($args.Count) {
+				 # Start([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.String[]] $urls)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::Start($this,$args[0]) }
+
+		 default { throw "No overload for 'Start' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SuppressStatusMessages</Name>
+        <Script> switch ($args.Count) {
+				 # SuppressStatusMessages([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Boolean] $suppressStatusMessages)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::SuppressStatusMessages($this,$args[0]) }
+
+		 default { throw "No overload for 'SuppressStatusMessages' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseConfiguration</Name>
+        <Script> switch ($args.Count) {
+				 # UseConfiguration([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [Microsoft.Extensions.Configuration.IConfiguration] $configuration)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::UseConfiguration($this,$args[0]) }
+
+		 default { throw "No overload for 'UseConfiguration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseContentRoot</Name>
+        <Script> switch ($args.Count) {
+				 # UseContentRoot([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.String] $contentRoot)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::UseContentRoot($this,$args[0]) }
+
+		 default { throw "No overload for 'UseContentRoot' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseDefaultServiceProvider</Name>
+        <Script> switch ($args.Count) {
+				 # UseDefaultServiceProvider([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Action`1[Microsoft.Extensions.DependencyInjection.ServiceProviderOptions]] $configure)
+		 1 { [Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions]::UseDefaultServiceProvider($this,$args[0]) }
+
+		 default { throw "No overload for 'UseDefaultServiceProvider' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseEnvironment</Name>
+        <Script> switch ($args.Count) {
+				 # UseEnvironment([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.String] $environment)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::UseEnvironment($this,$args[0]) }
+
+		 default { throw "No overload for 'UseEnvironment' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseIIS</Name>
+        <Script> switch ($args.Count) {
+				 # UseIIS([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder)
+		 0 { [Microsoft.AspNetCore.Hosting.WebHostBuilderIISExtensions]::UseIIS($this) }
+
+		 default { throw "No overload for 'UseIIS' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseIISIntegration</Name>
+        <Script> switch ($args.Count) {
+				 # UseIISIntegration([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder)
+		 0 { [Microsoft.AspNetCore.Hosting.WebHostBuilderIISExtensions]::UseIISIntegration($this) }
+
+		 default { throw "No overload for 'UseIISIntegration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseKestrel</Name>
+        <Script> switch ($args.Count) {
+				 # UseKestrel([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder)
+		 0 { [Microsoft.AspNetCore.Hosting.WebHostBuilderKestrelExtensions]::UseKestrel($this) }
+
+				 # UseKestrel([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Action`1[Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions]] $options)
+		 1 { [Microsoft.AspNetCore.Hosting.WebHostBuilderKestrelExtensions]::UseKestrel($this,$args[0]) }
+
+		 default { throw "No overload for 'UseKestrel' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseServer</Name>
+        <Script> switch ($args.Count) {
+				 # UseServer([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [Microsoft.AspNetCore.Hosting.Server.IServer] $server)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::UseServer($this,$args[0]) }
+
+		 default { throw "No overload for 'UseServer' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseShutdownTimeout</Name>
+        <Script> switch ($args.Count) {
+				 # UseShutdownTimeout([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.TimeSpan] $timeout)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::UseShutdownTimeout($this,$args[0]) }
+
+		 default { throw "No overload for 'UseShutdownTimeout' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseSockets</Name>
+        <Script> switch ($args.Count) {
+				 # UseSockets([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder)
+		 0 { [Microsoft.AspNetCore.Hosting.WebHostBuilderSocketExtensions]::UseSockets($this) }
+
+				 # UseSockets([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.Action`1[Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions]] $configureOptions)
+		 1 { [Microsoft.AspNetCore.Hosting.WebHostBuilderSocketExtensions]::UseSockets($this,$args[0]) }
+
+		 default { throw "No overload for 'UseSockets' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseStartup</Name>
+        <Script> switch ($args.Count) {
+				 # UseStartup([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder)
+		 0 { [Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions]::UseStartup($this) }
+
+				 # UseStartup([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.String] $startupAssemblyName)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::UseStartup($this,$args[0]) }
+
+		 default { throw "No overload for 'UseStartup' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseUrls</Name>
+        <Script> switch ($args.Count) {
+				 # UseUrls([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.String[]] $urls)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::UseUrls($this,$args[0]) }
+
+		 default { throw "No overload for 'UseUrls' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseWebRoot</Name>
+        <Script> switch ($args.Count) {
+				 # UseWebRoot([Microsoft.AspNetCore.Hosting.IWebHostBuilder] $hostBuilder, [System.String] $webRoot)
+		 1 { [Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions]::UseWebRoot($this,$args[0]) }
+
+		 default { throw "No overload for 'UseWebRoot' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

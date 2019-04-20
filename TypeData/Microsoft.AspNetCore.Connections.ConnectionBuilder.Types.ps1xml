@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Connections.ConnectionBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Run</Name>
+        <Script> switch ($args.Count) {
+				 # Run([Microsoft.AspNetCore.Connections.IConnectionBuilder] $connectionBuilder, [System.Func`2[Microsoft.AspNetCore.Connections.ConnectionContext,System.Threading.Tasks.Task]] $middleware)
+		 1 { [Microsoft.AspNetCore.Connections.ConnectionBuilderExtensions]::Run($this,$args[0]) }
+
+		 default { throw "No overload for 'Run' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Use</Name>
+        <Script> switch ($args.Count) {
+				 # Use([Microsoft.AspNetCore.Connections.IConnectionBuilder] $connectionBuilder, [System.Func`3[Microsoft.AspNetCore.Connections.ConnectionContext,System.Func`1[System.Threading.Tasks.Task],System.Threading.Tasks.Task]] $middleware)
+		 1 { [Microsoft.AspNetCore.Connections.ConnectionBuilderExtensions]::Use($this,$args[0]) }
+
+		 default { throw "No overload for 'Use' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseConnectionHandler</Name>
+        <Script> switch ($args.Count) {
+				 # UseConnectionHandler([Microsoft.AspNetCore.Connections.IConnectionBuilder] $connectionBuilder)
+		 0 { [Microsoft.AspNetCore.Connections.ConnectionBuilderExtensions]::UseConnectionHandler($this) }
+
+		 default { throw "No overload for 'UseConnectionHandler' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseHttpServer</Name>
+        <Script> switch ($args.Count) {
+				 # UseHttpServer([Microsoft.AspNetCore.Connections.IConnectionBuilder] $builder, [Microsoft.AspNetCore.Server.Kestrel.Core.Internal.ServiceContext] $serviceContext, [Microsoft.AspNetCore.Hosting.Server.IHttpApplication`1[TContext]] $application, [Microsoft.AspNetCore.Server.Kestrel.Core.HttpProtocols] $protocols)
+		 3 { [Microsoft.AspNetCore.Server.Kestrel.Core.Internal.HttpConnectionBuilderExtensions]::UseHttpServer($this,$args[0],$args[1],$args[2]) }
+
+				 # UseHttpServer([Microsoft.AspNetCore.Connections.IConnectionBuilder] $builder, [System.Collections.Generic.IList`1[Microsoft.AspNetCore.Server.Kestrel.Core.Adapter.Internal.IConnectionAdapter]] $adapters, [Microsoft.AspNetCore.Server.Kestrel.Core.Internal.ServiceContext] $serviceContext, [Microsoft.AspNetCore.Hosting.Server.IHttpApplication`1[TContext]] $application, [Microsoft.AspNetCore.Server.Kestrel.Core.HttpProtocols] $protocols)
+		 4 { [Microsoft.AspNetCore.Server.Kestrel.Core.Internal.HttpConnectionBuilderExtensions]::UseHttpServer($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'UseHttpServer' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

@@ -51,7 +51,7 @@ Copyright = '(c) Joel. All rights reserved.'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-# RequiredModules = @()
+RequiredModules = @('PSLambda')
 
 # Assemblies that must be loaded prior to importing this module
 RequiredAssemblies = @(
@@ -63,10 +63,10 @@ RequiredAssemblies = @(
     ".\bin\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
     ".\bin\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll"
     ".\bin\Microsoft.Extensions.FileProviders.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll"
-    ".\bin\Microsoft.Extensions.Configuration.EnvironmentVariables.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll"
+    ".\bin\Microsoft.Extensions.Configuration.EnvironmentVariables.2.2.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll"
     ".\bin\Microsoft.Extensions.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll"
     ".\bin\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll"
-
+    
     # before it would .build() I needed these
     ".\bin\Microsoft.AspNetCore.Server.Kestrel.Core.2.2.0\lib\netcoreapp2.1\Microsoft.AspNetCore.Server.Kestrel.Core.dll"
     ".\bin\Microsoft.AspNetCore.Server.Kestrel.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.Kestrel.dll"
@@ -75,13 +75,17 @@ RequiredAssemblies = @(
     ".\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll"
     ".\bin\Microsoft.AspNetCore.Http.Features.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll"
     ".\bin\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll"
+    ".\bin\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll"
+    ".\bin\Microsoft.Extensions.Logging.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Configuration.dll"
+    ".\bin\Microsoft.Extensions.Logging.Debug.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Debug.dll"
+    ".\bin\Microsoft.Extensions.Logging.Console.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Console.dll"
     ".\bin\Microsoft.Extensions.DependencyInjection.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll"
     ".\bin\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll"
     ".\bin\Microsoft.AspNetCore.Http.2.2.2\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll"
     ".\bin\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll"
-    ".\bin\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll"
     ".\bin\Microsoft.Extensions.ObjectPool.2.2.0\lib\netstandard2.0\Microsoft.Extensions.ObjectPool.dll"
     ".\bin\Microsoft.Extensions.FileProviders.Physical.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Physical.dll"
+    ".\bin\Microsoft.Extensions.FileProviders.Composite.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Composite.dll"
     ".\bin\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.2.2.1\lib\netstandard2.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll"
     ".\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll"
     ".\bin\Microsoft.AspNetCore.Diagnostics.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Diagnostics.dll"
@@ -92,20 +96,20 @@ RequiredAssemblies = @(
     ".\bin\Microsoft.AspNetCore.Server.IISIntegration.2.2.1\lib\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.dll"
     ".\bin\Microsoft.AspNetCore.Server.Kestrel.Https.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll"
     ".\bin\Microsoft.AspNetCore.WebUtilities.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll"
-    ".\bin\Microsoft.Extensions.Configuration.Binder.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll"
+    ".\bin\Microsoft.Extensions.Configuration.Binder.2.2.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll"
     ".\bin\Microsoft.Extensions.Configuration.Json.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Json.dll"
     ".\bin\Microsoft.Extensions.FileSystemGlobbing.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileSystemGlobbing.dll"
     ".\bin\Microsoft.Extensions.Logging.Console.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Console.dll"
     ".\bin\Microsoft.Extensions.Options.ConfigurationExtensions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll"
     ".\bin\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll"
-
+    ".\bin\Microsoft.Extensions.FileProviders.Embedded.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.dll"
 
     # In order to configure static files, we needed...
     ".\bin\Microsoft.AspNetCore.StaticFiles.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.StaticFiles.dll"
     ".\bin\Microsoft.Extensions.WebEncoders.2.2.0\lib\netstandard2.0\Microsoft.Extensions.WebEncoders.dll"
 
     # In order to .Start() we needed...
-    ".\bin\System.IO.Pipelines.4.5.3\lib\netstandard1.3\System.IO.Pipelines.dll"
+    ".\bin\System.IO.Pipelines.4.5.2\lib\netstandard2.0\System.IO.Pipelines.dll"
     ".\bin\Microsoft.AspNetCore.Connections.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Connections.Abstractions.dll"
 
     # For MVC, we would need ...
@@ -123,13 +127,114 @@ RequiredAssemblies = @(
     ".\bin\Microsoft.AspNetCore.Mvc.TagHelpers.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.TagHelpers.dll"
     ".\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Formatters.Json.dll"
     ".\bin\Microsoft.AspNetCore.Mvc.Cors.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Cors.dll"
+    ".\bin\Microsoft.AspNetCore.Authentication.Core.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Core.dll"
+    ".\bin\Microsoft.AspNetCore.Authentication.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Abstractions.dll"
+    ".\bin\Microsoft.AspNetCore.Authorization.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.dll"
+    ".\bin\Microsoft.AspNetCore.Authorization.Policy.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.Policy.dll"
+    ".\bin\Microsoft.AspNetCore.DataProtection.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.DataProtection.dll"
+    ".\bin\Microsoft.AspNetCore.DataProtection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.DataProtection.Abstractions.dll"
+    ".\bin\Microsoft.AspNetCore.Antiforgery.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Antiforgery.dll"
+    ".\bin\Microsoft.AspNetCore.Cryptography.Internal.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.Internal.dll"
+    ".\bin\Microsoft.CodeAnalysis.Razor.2.2.0\lib\netstandard2.0\Microsoft.CodeAnalysis.Razor.dll"
+    ".\bin\Microsoft.AspNetCore.Razor.Language.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Razor.Language.dll"
+    ".\bin\Microsoft.AspNetCore.Razor.Runtime.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Razor.Runtime.dll"
+    ".\bin\Microsoft.AspNetCore.Mvc.Razor.Extensions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll"
+    ".\bin\Microsoft.Extensions.Caching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll"
+    ".\bin\Microsoft.Extensions.Caching.Memory.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll"
+    ".\bin\Microsoft.AspNetCore.Cors.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Cors.dll"
+    ".\bin\Microsoft.Extensions.Localization.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Localization.Abstractions.dll"
+    ".\bin\Microsoft.AspNetCore.JsonPatch.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.JsonPatch.dll"
+    ".\bin\Microsoft.AspNetCore.Html.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Html.Abstractions.dll"
+    ".\bin\Microsoft.Extensions.DependencyModel.2.1.0\lib\netstandard1.6\Microsoft.Extensions.DependencyModel.dll"
+    ".\bin\Swashbuckle.AspNetCore.4.0.1\lib\netstandard2.0\Swashbuckle.AspNetCore.dll"
+    ".\bin\Swashbuckle.AspNetCore.Swagger.4.0.1\lib\netstandard2.0\Swashbuckle.AspNetCore.Swagger.dll"
+    ".\bin\Swashbuckle.AspNetCore.SwaggerGen.4.0.1\lib\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.dll"
+    ".\bin\Swashbuckle.AspNetCore.SwaggerUI.4.0.1\lib\netstandard2.0\Swashbuckle.AspNetCore.SwaggerUI.dll"
 )
 
 # Script files (.ps1) that are run in the caller's environment prior to importing this module.
 # ScriptsToProcess = @()
 
 # Type files (.ps1xml) to be loaded when importing this module
-# TypesToProcess = @()
+
+# Type files (.ps1xml) to be loaded when importing this module
+TypesToProcess = '.\TypeData\Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Authentication.AuthenticationService.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Builder.Internal.ApplicationBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Builder.MvcApplicationBuilderExtensions+EndpointRouteBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Connections.ConnectionBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.DataProtection.DataProtectionAdvancedExtensions+TimeLimitedWrappingProtector.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.DataProtection.Internal.DataProtectionBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtectionProvider.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.DataProtection.TimeLimitedDataProtector.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Hosting.Internal.HostingEnvironment.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Hosting.Internal.WebHost.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Hosting.WebHostBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Html.HtmlContentBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Http.HeaderDictionary.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.HttpSys.Internal.HeaderCollection.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.HttpSys.Internal.RequestHeaders.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.MiddlewareAnalysis.AnalysisBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.Internal.MvcBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.Internal.MvcCoreBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.Localization.HtmlLocalizer.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.Localization.ViewLocalizer.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.ModelBinding.Metadata.DefaultModelMetadata.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.ModelBinding.Metadata.DefaultModelMetadataProvider.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadataProvider.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.Routing.EndpointRoutingUrlHelper.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.Routing.UrlHelper.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.Routing.UrlHelperBase.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewBuffer.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Routing.RouteBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Core.AnyIPListenOptions.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestHeaders.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseTrailers.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TimeoutControl.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Core.Internal.KestrelTrace.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketsTrace.Types.ps1xml', 
+               '.\TypeData\Microsoft.AspNetCore.Session.DistributedSession.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Caching.Distributed.MemoryDistributedCache.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Caching.Memory.CacheEntry.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Caching.Memory.MemoryCache.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Configuration.ConfigurationBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Configuration.ConfigurationRoot.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Configuration.ConfigurationSection.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.DependencyInjection.ServiceCollection.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionsServiceProviderEngine.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeServiceProviderEngine.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.DependencyInjection.ServiceProvider.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Hosting.HostBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Hosting.Internal.Host.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Hosting.Internal.HostingEnvironment.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Localization.ResourceManagerWithCultureStringLocalizer.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Logging.Abstractions.NullLogger.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Logging.Console.ConsoleLogger.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Logging.Debug.DebugLogger.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Logging.EventSource.EventSourceLogger.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Logging.Logger.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Logging.LoggerFactory.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Logging.LoggingBuilder.Types.ps1xml', 
+               '.\TypeData\Microsoft.Extensions.Logging.TraceSource.TraceSourceLogger.Types.ps1xml'
+
 
 # Format files (.ps1xml) to be loaded when importing this module
 # FormatsToProcess = @()
@@ -138,7 +243,7 @@ RequiredAssemblies = @(
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = 'Start-Stella'
+FunctionsToExport = 'Start-Stella', 'Invoke-Stella', 'Stop-Stella'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = '*'

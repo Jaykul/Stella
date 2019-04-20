@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Mvc.Localization.HtmlLocalizer</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetAllStrings</Name>
+        <Script> switch ($args.Count) {
+				 # GetAllStrings([Microsoft.AspNetCore.Mvc.Localization.IHtmlLocalizer] $htmlLocalizer)
+		 0 { [Microsoft.AspNetCore.Mvc.Localization.HtmlLocalizerExtensions]::GetAllStrings($this) }
+
+		 default { throw "No overload for 'GetAllStrings' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetHtml</Name>
+        <Script> switch ($args.Count) {
+				 # GetHtml([Microsoft.AspNetCore.Mvc.Localization.IHtmlLocalizer] $htmlLocalizer, [System.String] $name)
+		 1 { [Microsoft.AspNetCore.Mvc.Localization.HtmlLocalizerExtensions]::GetHtml($this,$args[0]) }
+
+				 # GetHtml([Microsoft.AspNetCore.Mvc.Localization.IHtmlLocalizer] $htmlLocalizer, [System.String] $name, [System.Object[]] $arguments)
+		 2 { [Microsoft.AspNetCore.Mvc.Localization.HtmlLocalizerExtensions]::GetHtml($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetHtml' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

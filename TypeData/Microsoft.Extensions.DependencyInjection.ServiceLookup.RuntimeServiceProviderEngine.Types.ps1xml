@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeServiceProviderEngine</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>CreateScope</Name>
+        <Script> switch ($args.Count) {
+				 # CreateScope([System.IServiceProvider] $provider)
+		 0 { [Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions]::CreateScope($this) }
+
+		 default { throw "No overload for 'CreateScope' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetApplicationUniqueIdentifier</Name>
+        <Script> switch ($args.Count) {
+				 # GetApplicationUniqueIdentifier([System.IServiceProvider] $services)
+		 0 { [Microsoft.AspNetCore.DataProtection.DataProtectionUtilityExtensions]::GetApplicationUniqueIdentifier($this) }
+
+		 default { throw "No overload for 'GetApplicationUniqueIdentifier' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetDataProtectionProvider</Name>
+        <Script> switch ($args.Count) {
+				 # GetDataProtectionProvider([System.IServiceProvider] $services)
+		 0 { [Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions]::GetDataProtectionProvider($this) }
+
+		 default { throw "No overload for 'GetDataProtectionProvider' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetDataProtector</Name>
+        <Script> switch ($args.Count) {
+				 # GetDataProtector([System.IServiceProvider] $services, [System.Collections.Generic.IEnumerable`1[System.String]] $purposes)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions]::GetDataProtector($this,$args[0]) }
+
+				 # GetDataProtector([System.IServiceProvider] $services, [System.String] $purpose, [System.String[]] $subPurposes)
+		 2 { [Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions]::GetDataProtector($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetDataProtector' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetRequiredService</Name>
+        <Script> switch ($args.Count) {
+				 # GetRequiredService([System.IServiceProvider] $provider)
+		 0 { [Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions]::GetRequiredService($this) }
+
+				 # GetRequiredService([System.IServiceProvider] $provider, [System.Type] $serviceType)
+		 1 { [Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions]::GetRequiredService($this,$args[0]) }
+
+		 default { throw "No overload for 'GetRequiredService' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetService</Name>
+        <Script> switch ($args.Count) {
+				 # GetService([System.IServiceProvider] $provider)
+		 0 { [Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions]::GetService($this) }
+
+		 default { throw "No overload for 'GetService' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetServices</Name>
+        <Script> switch ($args.Count) {
+				 # GetServices([System.IServiceProvider] $provider)
+		 0 { [Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions]::GetServices($this) }
+
+				 # GetServices([System.IServiceProvider] $provider, [System.Type] $serviceType)
+		 1 { [Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions]::GetServices($this,$args[0]) }
+
+		 default { throw "No overload for 'GetServices' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

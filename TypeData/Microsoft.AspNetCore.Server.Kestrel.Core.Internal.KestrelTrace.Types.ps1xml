@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Server.Kestrel.Core.Internal.KestrelTrace</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>BeginScope</Name>
+        <Script> switch ($args.Count) {
+				 # BeginScope([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $messageFormat, [System.Object[]] $args)
+		 2 { [Microsoft.Extensions.Logging.LoggerExtensions]::BeginScope($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeginScope' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>FailedToCreateDataContractSerializer</Name>
+        <Script> switch ($args.Count) {
+				 # FailedToCreateDataContractSerializer([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $typeName, [System.Exception] $exception)
+		 2 { [Microsoft.AspNetCore.Mvc.Formatters.Xml.Internal.LoggerExtensions]::FailedToCreateDataContractSerializer($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'FailedToCreateDataContractSerializer' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>FailedToCreateXmlSerializer</Name>
+        <Script> switch ($args.Count) {
+				 # FailedToCreateXmlSerializer([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $typeName, [System.Exception] $exception)
+		 2 { [Microsoft.AspNetCore.Mvc.Formatters.Xml.Internal.LoggerExtensions]::FailedToCreateXmlSerializer($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'FailedToCreateXmlSerializer' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GeneratedCodeToAssemblyCompilationEnd</Name>
+        <Script> switch ($args.Count) {
+				 # GeneratedCodeToAssemblyCompilationEnd([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $filePath, [System.Int64] $startTimestamp)
+		 2 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::GeneratedCodeToAssemblyCompilationEnd($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GeneratedCodeToAssemblyCompilationEnd' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GeneratedCodeToAssemblyCompilationStart</Name>
+        <Script> switch ($args.Count) {
+				 # GeneratedCodeToAssemblyCompilationStart([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $filePath)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::GeneratedCodeToAssemblyCompilationStart($this,$args[0]) }
+
+		 default { throw "No overload for 'GeneratedCodeToAssemblyCompilationStart' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Log</Name>
+        <Script> switch ($args.Count) {
+				 # Log([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.LogLevel] $logLevel, [System.String] $message, [System.Object[]] $args)
+		 3 { [Microsoft.Extensions.Logging.LoggerExtensions]::Log($this,$args[0],$args[1],$args[2]) }
+
+				 # Log([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.LogLevel] $logLevel, [Microsoft.Extensions.Logging.EventId] $eventId, [System.String] $message, [System.Object[]] $args)
+		 4 { [Microsoft.Extensions.Logging.LoggerExtensions]::Log($this,$args[0],$args[1],$args[2],$args[3]) }
+
+				 # Log([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.LogLevel] $logLevel, [Microsoft.Extensions.Logging.EventId] $eventId, [System.Exception] $exception, [System.String] $message, [System.Object[]] $args)
+		 5 { [Microsoft.Extensions.Logging.LoggerExtensions]::Log($this,$args[0],$args[1],$args[2],$args[3],$args[4]) }
+
+		 default { throw "No overload for 'Log' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>LogCritical</Name>
+        <Script> switch ($args.Count) {
+				 # LogCritical([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $message, [System.Object[]] $args)
+		 2 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogCritical($this,$args[0],$args[1]) }
+
+				 # LogCritical([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.String] $message, [System.Object[]] $args)
+		 3 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogCritical($this,$args[0],$args[1],$args[2]) }
+
+				 # LogCritical([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.Exception] $exception, [System.String] $message, [System.Object[]] $args)
+		 4 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogCritical($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'LogCritical' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>LogDebug</Name>
+        <Script> switch ($args.Count) {
+				 # LogDebug([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $message, [System.Object[]] $args)
+		 2 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogDebug($this,$args[0],$args[1]) }
+
+				 # LogDebug([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.String] $message, [System.Object[]] $args)
+		 3 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogDebug($this,$args[0],$args[1],$args[2]) }
+
+				 # LogDebug([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.Exception] $exception, [System.String] $message, [System.Object[]] $args)
+		 4 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogDebug($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'LogDebug' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>LogError</Name>
+        <Script> switch ($args.Count) {
+				 # LogError([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $message, [System.Object[]] $args)
+		 2 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogError($this,$args[0],$args[1]) }
+
+				 # LogError([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.String] $message, [System.Object[]] $args)
+		 3 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogError($this,$args[0],$args[1],$args[2]) }
+
+				 # LogError([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.Exception] $exception, [System.String] $message, [System.Object[]] $args)
+		 4 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogError($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'LogError' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>LogInformation</Name>
+        <Script> switch ($args.Count) {
+				 # LogInformation([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $message, [System.Object[]] $args)
+		 2 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogInformation($this,$args[0],$args[1]) }
+
+				 # LogInformation([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.String] $message, [System.Object[]] $args)
+		 3 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogInformation($this,$args[0],$args[1],$args[2]) }
+
+				 # LogInformation([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.Exception] $exception, [System.String] $message, [System.Object[]] $args)
+		 4 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogInformation($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'LogInformation' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>LogTrace</Name>
+        <Script> switch ($args.Count) {
+				 # LogTrace([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $message, [System.Object[]] $args)
+		 2 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogTrace($this,$args[0],$args[1]) }
+
+				 # LogTrace([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.String] $message, [System.Object[]] $args)
+		 3 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogTrace($this,$args[0],$args[1],$args[2]) }
+
+				 # LogTrace([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.Exception] $exception, [System.String] $message, [System.Object[]] $args)
+		 4 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogTrace($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'LogTrace' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>LogWarning</Name>
+        <Script> switch ($args.Count) {
+				 # LogWarning([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $message, [System.Object[]] $args)
+		 2 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogWarning($this,$args[0],$args[1]) }
+
+				 # LogWarning([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.String] $message, [System.Object[]] $args)
+		 3 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogWarning($this,$args[0],$args[1],$args[2]) }
+
+				 # LogWarning([Microsoft.Extensions.Logging.ILogger] $logger, [Microsoft.Extensions.Logging.EventId] $eventId, [System.Exception] $exception, [System.String] $message, [System.Object[]] $args)
+		 4 { [Microsoft.Extensions.Logging.LoggerExtensions]::LogWarning($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'LogWarning' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>NotMostEffectiveFilter</Name>
+        <Script> switch ($args.Count) {
+				 # NotMostEffectiveFilter([Microsoft.Extensions.Logging.ILogger] $logger, [System.Type] $policyType)
+		 1 { [Microsoft.AspNetCore.Mvc.Cors.Internal.CorsLoggerExtensions]::NotMostEffectiveFilter($this,$args[0]) }
+
+		 default { throw "No overload for 'NotMostEffectiveFilter' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>PrecompiledViewFound</Name>
+        <Script> switch ($args.Count) {
+				 # PrecompiledViewFound([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $relativePath)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::PrecompiledViewFound($this,$args[0]) }
+
+		 default { throw "No overload for 'PrecompiledViewFound' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>TagHelperComponentInitialized</Name>
+        <Script> switch ($args.Count) {
+				 # TagHelperComponentInitialized([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $componentName)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::TagHelperComponentInitialized($this,$args[0]) }
+
+		 default { throw "No overload for 'TagHelperComponentInitialized' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>TagHelperComponentProcessed</Name>
+        <Script> switch ($args.Count) {
+				 # TagHelperComponentProcessed([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $componentName)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::TagHelperComponentProcessed($this,$args[0]) }
+
+		 default { throw "No overload for 'TagHelperComponentProcessed' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewCompilerCouldNotFindFileAtPath</Name>
+        <Script> switch ($args.Count) {
+				 # ViewCompilerCouldNotFindFileAtPath([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $path)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewCompilerCouldNotFindFileAtPath($this,$args[0]) }
+
+		 default { throw "No overload for 'ViewCompilerCouldNotFindFileAtPath' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewCompilerEndCodeGeneration</Name>
+        <Script> switch ($args.Count) {
+				 # ViewCompilerEndCodeGeneration([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $filePath, [System.Int64] $startTimestamp)
+		 2 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewCompilerEndCodeGeneration($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ViewCompilerEndCodeGeneration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewCompilerFoundFileToCompile</Name>
+        <Script> switch ($args.Count) {
+				 # ViewCompilerFoundFileToCompile([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $path)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewCompilerFoundFileToCompile($this,$args[0]) }
+
+		 default { throw "No overload for 'ViewCompilerFoundFileToCompile' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewCompilerInvalidingCompiledFile</Name>
+        <Script> switch ($args.Count) {
+				 # ViewCompilerInvalidingCompiledFile([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $path)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewCompilerInvalidingCompiledFile($this,$args[0]) }
+
+		 default { throw "No overload for 'ViewCompilerInvalidingCompiledFile' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewCompilerLocatedCompiledView</Name>
+        <Script> switch ($args.Count) {
+				 # ViewCompilerLocatedCompiledView([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $view)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewCompilerLocatedCompiledView($this,$args[0]) }
+
+		 default { throw "No overload for 'ViewCompilerLocatedCompiledView' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewCompilerLocatedCompiledViewForPath</Name>
+        <Script> switch ($args.Count) {
+				 # ViewCompilerLocatedCompiledViewForPath([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $path)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewCompilerLocatedCompiledViewForPath($this,$args[0]) }
+
+		 default { throw "No overload for 'ViewCompilerLocatedCompiledViewForPath' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewCompilerNoCompiledViewsFound</Name>
+        <Script> switch ($args.Count) {
+				 # ViewCompilerNoCompiledViewsFound([Microsoft.Extensions.Logging.ILogger] $logger)
+		 0 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewCompilerNoCompiledViewsFound($this) }
+
+		 default { throw "No overload for 'ViewCompilerNoCompiledViewsFound' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewCompilerStartCodeGeneration</Name>
+        <Script> switch ($args.Count) {
+				 # ViewCompilerStartCodeGeneration([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $filePath)
+		 1 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewCompilerStartCodeGeneration($this,$args[0]) }
+
+		 default { throw "No overload for 'ViewCompilerStartCodeGeneration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewLookupCacheHit</Name>
+        <Script> switch ($args.Count) {
+				 # ViewLookupCacheHit([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $viewName, [System.String] $controllerName)
+		 2 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewLookupCacheHit($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ViewLookupCacheHit' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ViewLookupCacheMiss</Name>
+        <Script> switch ($args.Count) {
+				 # ViewLookupCacheMiss([Microsoft.Extensions.Logging.ILogger] $logger, [System.String] $viewName, [System.String] $controllerName)
+		 2 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorLoggerExtensions]::ViewLookupCacheMiss($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ViewLookupCacheMiss' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

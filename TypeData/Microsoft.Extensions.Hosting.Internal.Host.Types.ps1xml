@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Hosting.Internal.Host</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Run</Name>
+        <Script> switch ($args.Count) {
+				 # Run([Microsoft.Extensions.Hosting.IHost] $host)
+		 0 { [Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions]::Run($this) }
+
+		 default { throw "No overload for 'Run' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RunAsync</Name>
+        <Script> switch ($args.Count) {
+				 # RunAsync([Microsoft.Extensions.Hosting.IHost] $host, [System.Threading.CancellationToken] $token)
+		 1 { [Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions]::RunAsync($this,$args[0]) }
+
+		 default { throw "No overload for 'RunAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Start</Name>
+        <Script> switch ($args.Count) {
+				 # Start([Microsoft.Extensions.Hosting.IHost] $host)
+		 0 { [Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions]::Start($this) }
+
+		 default { throw "No overload for 'Start' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>StopAsync</Name>
+        <Script> switch ($args.Count) {
+				 # StopAsync([Microsoft.Extensions.Hosting.IHost] $host, [System.TimeSpan] $timeout)
+		 1 { [Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions]::StopAsync($this,$args[0]) }
+
+		 default { throw "No overload for 'StopAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>WaitForShutdown</Name>
+        <Script> switch ($args.Count) {
+				 # WaitForShutdown([Microsoft.Extensions.Hosting.IHost] $host)
+		 0 { [Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions]::WaitForShutdown($this) }
+
+		 default { throw "No overload for 'WaitForShutdown' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>WaitForShutdownAsync</Name>
+        <Script> switch ($args.Count) {
+				 # WaitForShutdownAsync([Microsoft.Extensions.Hosting.IHost] $host, [System.Threading.CancellationToken] $token)
+		 1 { [Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions]::WaitForShutdownAsync($this,$args[0]) }
+
+		 default { throw "No overload for 'WaitForShutdownAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Caching.Distributed.MemoryDistributedCache</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetString</Name>
+        <Script> switch ($args.Count) {
+				 # GetString([Microsoft.Extensions.Caching.Distributed.IDistributedCache] $cache, [System.String] $key)
+		 1 { [Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions]::GetString($this,$args[0]) }
+
+		 default { throw "No overload for 'GetString' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetStringAsync</Name>
+        <Script> switch ($args.Count) {
+				 # GetStringAsync([Microsoft.Extensions.Caching.Distributed.IDistributedCache] $cache, [System.String] $key, [System.Threading.CancellationToken] $token)
+		 2 { [Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions]::GetStringAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetStringAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Set</Name>
+        <Script> switch ($args.Count) {
+				 # Set([Microsoft.Extensions.Caching.Distributed.IDistributedCache] $cache, [System.String] $key, [System.Byte[]] $value)
+		 2 { [Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions]::Set($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Set' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetAsync</Name>
+        <Script> switch ($args.Count) {
+				 # SetAsync([Microsoft.Extensions.Caching.Distributed.IDistributedCache] $cache, [System.String] $key, [System.Byte[]] $value, [System.Threading.CancellationToken] $token)
+		 3 { [Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions]::SetAsync($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'SetAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetString</Name>
+        <Script> switch ($args.Count) {
+				 # SetString([Microsoft.Extensions.Caching.Distributed.IDistributedCache] $cache, [System.String] $key, [System.String] $value)
+		 2 { [Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions]::SetString($this,$args[0],$args[1]) }
+
+				 # SetString([Microsoft.Extensions.Caching.Distributed.IDistributedCache] $cache, [System.String] $key, [System.String] $value, [Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions] $options)
+		 3 { [Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions]::SetString($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'SetString' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetStringAsync</Name>
+        <Script> switch ($args.Count) {
+				 # SetStringAsync([Microsoft.Extensions.Caching.Distributed.IDistributedCache] $cache, [System.String] $key, [System.String] $value, [System.Threading.CancellationToken] $token)
+		 3 { [Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions]::SetStringAsync($this,$args[0],$args[1],$args[2]) }
+
+				 # SetStringAsync([Microsoft.Extensions.Caching.Distributed.IDistributedCache] $cache, [System.String] $key, [System.String] $value, [Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions] $options, [System.Threading.CancellationToken] $token)
+		 4 { [Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions]::SetStringAsync($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'SetStringAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

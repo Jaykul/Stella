@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Localization.ResourceManagerWithCultureStringLocalizer</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetAllStrings</Name>
+        <Script> switch ($args.Count) {
+				 # GetAllStrings([Microsoft.Extensions.Localization.IStringLocalizer] $stringLocalizer)
+		 0 { [Microsoft.Extensions.Localization.StringLocalizerExtensions]::GetAllStrings($this) }
+
+		 default { throw "No overload for 'GetAllStrings' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetString</Name>
+        <Script> switch ($args.Count) {
+				 # GetString([Microsoft.Extensions.Localization.IStringLocalizer] $stringLocalizer, [System.String] $name)
+		 1 { [Microsoft.Extensions.Localization.StringLocalizerExtensions]::GetString($this,$args[0]) }
+
+				 # GetString([Microsoft.Extensions.Localization.IStringLocalizer] $stringLocalizer, [System.String] $name, [System.Object[]] $arguments)
+		 2 { [Microsoft.Extensions.Localization.StringLocalizerExtensions]::GetString($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetString' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

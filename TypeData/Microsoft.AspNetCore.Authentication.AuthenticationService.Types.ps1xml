@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Authentication.AuthenticationService</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetTokenAsync</Name>
+        <Script> switch ($args.Count) {
+				 # GetTokenAsync([Microsoft.AspNetCore.Authentication.IAuthenticationService] $auth, [Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $tokenName)
+		 2 { [Microsoft.AspNetCore.Authentication.AuthenticationTokenExtensions]::GetTokenAsync($this,$args[0],$args[1]) }
+
+				 # GetTokenAsync([Microsoft.AspNetCore.Authentication.IAuthenticationService] $auth, [Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme, [System.String] $tokenName)
+		 3 { [Microsoft.AspNetCore.Authentication.AuthenticationTokenExtensions]::GetTokenAsync($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'GetTokenAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

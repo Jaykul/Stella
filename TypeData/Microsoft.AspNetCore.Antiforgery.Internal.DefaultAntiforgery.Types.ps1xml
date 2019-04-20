@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetHtml</Name>
+        <Script> switch ($args.Count) {
+				 # GetHtml([Microsoft.AspNetCore.Antiforgery.IAntiforgery] $antiforgery, [Microsoft.AspNetCore.Http.HttpContext] $httpContext)
+		 1 { [Microsoft.AspNetCore.Mvc.ViewFeatures.AntiforgeryExtensions]::GetHtml($this,$args[0]) }
+
+		 default { throw "No overload for 'GetHtml' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

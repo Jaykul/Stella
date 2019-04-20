@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AddConsole</Name>
+        <Script> switch ($args.Count) {
+				 # AddConsole([Microsoft.Extensions.Logging.ILoggerFactory] $factory)
+		 0 { [Microsoft.Extensions.Logging.ConsoleLoggerExtensions]::AddConsole($this) }
+
+				 # AddConsole([Microsoft.Extensions.Logging.ILoggerFactory] $factory, [System.Boolean] $includeScopes)
+		 1 { [Microsoft.Extensions.Logging.ConsoleLoggerExtensions]::AddConsole($this,$args[0]) }
+
+				 # AddConsole([Microsoft.Extensions.Logging.ILoggerFactory] $factory, [Microsoft.Extensions.Logging.LogLevel] $minLevel, [System.Boolean] $includeScopes)
+		 2 { [Microsoft.Extensions.Logging.ConsoleLoggerExtensions]::AddConsole($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AddConsole' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddDebug</Name>
+        <Script> switch ($args.Count) {
+				 # AddDebug([Microsoft.Extensions.Logging.ILoggerFactory] $factory)
+		 0 { [Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions]::AddDebug($this) }
+
+				 # AddDebug([Microsoft.Extensions.Logging.ILoggerFactory] $factory, [System.Func`3[System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean]] $filter)
+		 1 { [Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions]::AddDebug($this,$args[0]) }
+
+		 default { throw "No overload for 'AddDebug' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddEventSourceLogger</Name>
+        <Script> switch ($args.Count) {
+				 # AddEventSourceLogger([Microsoft.Extensions.Logging.ILoggerFactory] $factory)
+		 0 { [Microsoft.Extensions.Logging.EventSourceLoggerFactoryExtensions]::AddEventSourceLogger($this) }
+
+		 default { throw "No overload for 'AddEventSourceLogger' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddTraceSource</Name>
+        <Script> switch ($args.Count) {
+				 # AddTraceSource([Microsoft.Extensions.Logging.ILoggerFactory] $factory, [System.String] $switchName)
+		 1 { [Microsoft.Extensions.Logging.TraceSourceFactoryExtensions]::AddTraceSource($this,$args[0]) }
+
+				 # AddTraceSource([Microsoft.Extensions.Logging.ILoggerFactory] $factory, [System.String] $switchName, [System.Diagnostics.TraceListener] $listener)
+		 2 { [Microsoft.Extensions.Logging.TraceSourceFactoryExtensions]::AddTraceSource($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AddTraceSource' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>CreateLogger</Name>
+        <Script> switch ($args.Count) {
+				 # CreateLogger([Microsoft.Extensions.Logging.ILoggerFactory] $factory)
+		 0 { [Microsoft.Extensions.Logging.LoggerFactoryExtensions]::CreateLogger($this) }
+
+				 # CreateLogger([Microsoft.Extensions.Logging.ILoggerFactory] $factory, [System.Type] $type)
+		 1 { [Microsoft.Extensions.Logging.LoggerFactoryExtensions]::CreateLogger($this,$args[0]) }
+
+		 default { throw "No overload for 'CreateLogger' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Configuration.ConfigurationBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Add</Name>
+        <Script> switch ($args.Count) {
+				 # Add([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder, [System.Action`1[TSource]] $configureSource)
+		 1 { [Microsoft.Extensions.Configuration.ConfigurationExtensions]::Add($this,$args[0]) }
+
+		 default { throw "No overload for 'Add' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddCommandLine</Name>
+        <Script> switch ($args.Count) {
+				 # AddCommandLine([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configurationBuilder, [System.String[]] $args)
+		 1 { [Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions]::AddCommandLine($this,$args[0]) }
+
+				 # AddCommandLine([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configurationBuilder, [System.String[]] $args, [System.Collections.Generic.IDictionary`2[System.String,System.String]] $switchMappings)
+		 2 { [Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions]::AddCommandLine($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AddCommandLine' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddConfiguration</Name>
+        <Script> switch ($args.Count) {
+				 # AddConfiguration([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configurationBuilder, [Microsoft.Extensions.Configuration.IConfiguration] $config)
+		 1 { [Microsoft.Extensions.Configuration.ChainedBuilderExtensions]::AddConfiguration($this,$args[0]) }
+
+		 default { throw "No overload for 'AddConfiguration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddEnvironmentVariables</Name>
+        <Script> switch ($args.Count) {
+				 # AddEnvironmentVariables([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configurationBuilder)
+		 0 { [Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions]::AddEnvironmentVariables($this) }
+
+				 # AddEnvironmentVariables([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configurationBuilder, [System.String] $prefix)
+		 1 { [Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions]::AddEnvironmentVariables($this,$args[0]) }
+
+		 default { throw "No overload for 'AddEnvironmentVariables' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddInMemoryCollection</Name>
+        <Script> switch ($args.Count) {
+				 # AddInMemoryCollection([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configurationBuilder)
+		 0 { [Microsoft.Extensions.Configuration.MemoryConfigurationBuilderExtensions]::AddInMemoryCollection($this) }
+
+				 # AddInMemoryCollection([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configurationBuilder, [System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[System.String,System.String]]] $initialData)
+		 1 { [Microsoft.Extensions.Configuration.MemoryConfigurationBuilderExtensions]::AddInMemoryCollection($this,$args[0]) }
+
+		 default { throw "No overload for 'AddInMemoryCollection' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddJsonFile</Name>
+        <Script> switch ($args.Count) {
+				 # AddJsonFile([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder, [System.String] $path)
+		 1 { [Microsoft.Extensions.Configuration.JsonConfigurationExtensions]::AddJsonFile($this,$args[0]) }
+
+				 # AddJsonFile([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder, [System.String] $path, [System.Boolean] $optional)
+		 2 { [Microsoft.Extensions.Configuration.JsonConfigurationExtensions]::AddJsonFile($this,$args[0],$args[1]) }
+
+				 # AddJsonFile([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder, [System.String] $path, [System.Boolean] $optional, [System.Boolean] $reloadOnChange)
+		 3 { [Microsoft.Extensions.Configuration.JsonConfigurationExtensions]::AddJsonFile($this,$args[0],$args[1],$args[2]) }
+
+				 # AddJsonFile([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder, [Microsoft.Extensions.FileProviders.IFileProvider] $provider, [System.String] $path, [System.Boolean] $optional, [System.Boolean] $reloadOnChange)
+		 4 { [Microsoft.Extensions.Configuration.JsonConfigurationExtensions]::AddJsonFile($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'AddJsonFile' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddUserSecrets</Name>
+        <Script> switch ($args.Count) {
+				 # AddUserSecrets([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configuration)
+		 0 { [Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions]::AddUserSecrets($this) }
+
+				 # AddUserSecrets([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configuration, [System.Boolean] $optional)
+		 1 { [Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions]::AddUserSecrets($this,$args[0]) }
+
+				 # AddUserSecrets([Microsoft.Extensions.Configuration.IConfigurationBuilder] $configuration, [System.Reflection.Assembly] $assembly, [System.Boolean] $optional)
+		 2 { [Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions]::AddUserSecrets($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AddUserSecrets' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetFileLoadExceptionHandler</Name>
+        <Script> switch ($args.Count) {
+				 # GetFileLoadExceptionHandler([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder)
+		 0 { [Microsoft.Extensions.Configuration.FileConfigurationExtensions]::GetFileLoadExceptionHandler($this) }
+
+		 default { throw "No overload for 'GetFileLoadExceptionHandler' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetFileProvider</Name>
+        <Script> switch ($args.Count) {
+				 # GetFileProvider([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder)
+		 0 { [Microsoft.Extensions.Configuration.FileConfigurationExtensions]::GetFileProvider($this) }
+
+		 default { throw "No overload for 'GetFileProvider' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetBasePath</Name>
+        <Script> switch ($args.Count) {
+				 # SetBasePath([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder, [System.String] $basePath)
+		 1 { [Microsoft.Extensions.Configuration.FileConfigurationExtensions]::SetBasePath($this,$args[0]) }
+
+		 default { throw "No overload for 'SetBasePath' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetFileLoadExceptionHandler</Name>
+        <Script> switch ($args.Count) {
+				 # SetFileLoadExceptionHandler([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder, [System.Action`1[Microsoft.Extensions.Configuration.FileLoadExceptionContext]] $handler)
+		 1 { [Microsoft.Extensions.Configuration.FileConfigurationExtensions]::SetFileLoadExceptionHandler($this,$args[0]) }
+
+		 default { throw "No overload for 'SetFileLoadExceptionHandler' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetFileProvider</Name>
+        <Script> switch ($args.Count) {
+				 # SetFileProvider([Microsoft.Extensions.Configuration.IConfigurationBuilder] $builder, [Microsoft.Extensions.FileProviders.IFileProvider] $fileProvider)
+		 1 { [Microsoft.Extensions.Configuration.FileConfigurationExtensions]::SetFileProvider($this,$args[0]) }
+
+		 default { throw "No overload for 'SetFileProvider' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

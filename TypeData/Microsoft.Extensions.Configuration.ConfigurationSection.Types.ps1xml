@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Configuration.ConfigurationSection</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Exists</Name>
+        <Script> switch ($args.Count) {
+				 # Exists([Microsoft.Extensions.Configuration.IConfigurationSection] $section)
+		 0 { [Microsoft.Extensions.Configuration.ConfigurationExtensions]::Exists($this) }
+
+		 default { throw "No overload for 'Exists' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

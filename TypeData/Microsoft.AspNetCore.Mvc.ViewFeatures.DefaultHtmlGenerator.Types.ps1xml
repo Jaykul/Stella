@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GenerateForm</Name>
+        <Script> switch ($args.Count) {
+				 # GenerateForm([Microsoft.AspNetCore.Mvc.ViewFeatures.IHtmlGenerator] $generator, [Microsoft.AspNetCore.Mvc.Rendering.ViewContext] $viewContext, [System.String] $actionName, [System.String] $controllerName, [System.String] $fragment, [System.Object] $routeValues, [System.String] $method, [System.Object] $htmlAttributes)
+		 7 { [Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGeneratorExtensions]::GenerateForm($this,$args[0],$args[1],$args[2],$args[3],$args[4],$args[5],$args[6]) }
+
+		 default { throw "No overload for 'GenerateForm' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GenerateRouteForm</Name>
+        <Script> switch ($args.Count) {
+				 # GenerateRouteForm([Microsoft.AspNetCore.Mvc.ViewFeatures.IHtmlGenerator] $generator, [Microsoft.AspNetCore.Mvc.Rendering.ViewContext] $viewContext, [System.String] $routeName, [System.Object] $routeValues, [System.String] $fragment, [System.String] $method, [System.Object] $htmlAttributes)
+		 6 { [Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGeneratorExtensions]::GenerateRouteForm($this,$args[0],$args[1],$args[2],$args[3],$args[4],$args[5]) }
+
+		 default { throw "No overload for 'GenerateRouteForm' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

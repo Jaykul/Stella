@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Hosting.Internal.HostingEnvironment</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>IsDevelopment</Name>
+        <Script> switch ($args.Count) {
+				 # IsDevelopment([Microsoft.Extensions.Hosting.IHostingEnvironment] $hostingEnvironment)
+		 0 { [Microsoft.Extensions.Hosting.HostingEnvironmentExtensions]::IsDevelopment($this) }
+
+		 default { throw "No overload for 'IsDevelopment' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>IsEnvironment</Name>
+        <Script> switch ($args.Count) {
+				 # IsEnvironment([Microsoft.Extensions.Hosting.IHostingEnvironment] $hostingEnvironment, [System.String] $environmentName)
+		 1 { [Microsoft.Extensions.Hosting.HostingEnvironmentExtensions]::IsEnvironment($this,$args[0]) }
+
+		 default { throw "No overload for 'IsEnvironment' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>IsProduction</Name>
+        <Script> switch ($args.Count) {
+				 # IsProduction([Microsoft.Extensions.Hosting.IHostingEnvironment] $hostingEnvironment)
+		 0 { [Microsoft.Extensions.Hosting.HostingEnvironmentExtensions]::IsProduction($this) }
+
+		 default { throw "No overload for 'IsProduction' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>IsStaging</Name>
+        <Script> switch ($args.Count) {
+				 # IsStaging([Microsoft.Extensions.Hosting.IHostingEnvironment] $hostingEnvironment)
+		 0 { [Microsoft.Extensions.Hosting.HostingEnvironmentExtensions]::IsStaging($this) }
+
+		 default { throw "No overload for 'IsStaging' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

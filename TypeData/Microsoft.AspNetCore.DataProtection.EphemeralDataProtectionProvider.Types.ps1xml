@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>CreateProtector</Name>
+        <Script> switch ($args.Count) {
+				 # CreateProtector([Microsoft.AspNetCore.DataProtection.IDataProtectionProvider] $provider, [System.Collections.Generic.IEnumerable`1[System.String]] $purposes)
+		 1 { [Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions]::CreateProtector($this,$args[0]) }
+
+				 # CreateProtector([Microsoft.AspNetCore.DataProtection.IDataProtectionProvider] $provider, [System.String] $purpose, [System.String[]] $subPurposes)
+		 2 { [Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions]::CreateProtector($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'CreateProtector' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

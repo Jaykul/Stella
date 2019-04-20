@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.HttpSys.Internal.HeaderCollection</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Append</Name>
+        <Script> switch ($args.Count) {
+				 # Append([Microsoft.AspNetCore.Http.IHeaderDictionary] $headers, [System.String] $key, [Microsoft.Extensions.Primitives.StringValues] $value)
+		 2 { [Microsoft.AspNetCore.Http.HeaderDictionaryExtensions]::Append($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Append' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AppendCommaSeparatedValues</Name>
+        <Script> switch ($args.Count) {
+				 # AppendCommaSeparatedValues([Microsoft.AspNetCore.Http.IHeaderDictionary] $headers, [System.String] $key, [System.String[]] $values)
+		 2 { [Microsoft.AspNetCore.Http.HeaderDictionaryExtensions]::AppendCommaSeparatedValues($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AppendCommaSeparatedValues' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AppendList</Name>
+        <Script> switch ($args.Count) {
+				 # AppendList([Microsoft.AspNetCore.Http.IHeaderDictionary] $Headers, [System.String] $name, [System.Collections.Generic.IList`1[T]] $values)
+		 2 { [Microsoft.AspNetCore.Http.HeaderDictionaryTypeExtensions]::AppendList($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AppendList' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetCommaSeparatedValues</Name>
+        <Script> switch ($args.Count) {
+				 # GetCommaSeparatedValues([Microsoft.AspNetCore.Http.IHeaderDictionary] $headers, [System.String] $key)
+		 1 { [Microsoft.AspNetCore.Http.HeaderDictionaryExtensions]::GetCommaSeparatedValues($this,$args[0]) }
+
+		 default { throw "No overload for 'GetCommaSeparatedValues' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetCommaSeparatedValues</Name>
+        <Script> switch ($args.Count) {
+				 # SetCommaSeparatedValues([Microsoft.AspNetCore.Http.IHeaderDictionary] $headers, [System.String] $key, [System.String[]] $values)
+		 2 { [Microsoft.AspNetCore.Http.HeaderDictionaryExtensions]::SetCommaSeparatedValues($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'SetCommaSeparatedValues' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

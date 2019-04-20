@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Hosting.Internal.WebHost</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Run</Name>
+        <Script> switch ($args.Count) {
+				 # Run([Microsoft.AspNetCore.Hosting.IWebHost] $WebHost)
+		 0 { [WebHostExtensions]::Run($this) }
+
+		 default { throw "No overload for 'Run' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Start</Name>
+        <Script> switch ($args.Count) {
+				 # Start([Microsoft.AspNetCore.Hosting.IWebHost] $WebHost)
+		 0 { [WebHostExtensions]::Start($this) }
+
+		 default { throw "No overload for 'Start' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Stop</Name>
+        <Script> switch ($args.Count) {
+				 # Stop([Microsoft.AspNetCore.Hosting.IWebHost] $WebHost)
+		 0 { [WebHostExtensions]::Stop($this) }
+
+		 default { throw "No overload for 'Stop' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Authorization.DefaultAuthorizationService</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AuthorizeAsync</Name>
+        <Script> switch ($args.Count) {
+				 # AuthorizeAsync([Microsoft.AspNetCore.Authorization.IAuthorizationService] $service, [System.Security.Claims.ClaimsPrincipal] $user, [Microsoft.AspNetCore.Authorization.AuthorizationPolicy] $policy)
+		 2 { [Microsoft.AspNetCore.Authorization.AuthorizationServiceExtensions]::AuthorizeAsync($this,$args[0],$args[1]) }
+
+				 # AuthorizeAsync([Microsoft.AspNetCore.Authorization.IAuthorizationService] $service, [System.Security.Claims.ClaimsPrincipal] $user, [System.Object] $resource, [Microsoft.AspNetCore.Authorization.IAuthorizationRequirement] $requirement)
+		 3 { [Microsoft.AspNetCore.Authorization.AuthorizationServiceExtensions]::AuthorizeAsync($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'AuthorizeAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

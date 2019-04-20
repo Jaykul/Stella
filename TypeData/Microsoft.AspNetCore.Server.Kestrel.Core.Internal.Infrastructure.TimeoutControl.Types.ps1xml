@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TimeoutControl</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>StartDrainTimeout</Name>
+        <Script> switch ($args.Count) {
+				 # StartDrainTimeout([Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.ITimeoutControl] $timeoutControl, [Microsoft.AspNetCore.Server.Kestrel.Core.MinDataRate] $minDataRate, [System.Nullable`1[System.Int64]] $maxResponseBufferSize)
+		 2 { [Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TimeoutControlExtensions]::StartDrainTimeout($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'StartDrainTimeout' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

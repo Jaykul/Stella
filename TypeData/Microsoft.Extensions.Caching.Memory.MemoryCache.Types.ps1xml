@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Caching.Memory.MemoryCache</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Get</Name>
+        <Script> switch ($args.Count) {
+				 # Get([Microsoft.Extensions.Caching.Memory.IMemoryCache] $cache, [System.Object] $key)
+		 1 { [Microsoft.Extensions.Caching.Memory.CacheExtensions]::Get($this,$args[0]) }
+
+		 default { throw "No overload for 'Get' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetOrCreate</Name>
+        <Script> switch ($args.Count) {
+				 # GetOrCreate([Microsoft.Extensions.Caching.Memory.IMemoryCache] $cache, [System.Object] $key, [System.Func`2[Microsoft.Extensions.Caching.Memory.ICacheEntry,TItem]] $factory)
+		 2 { [Microsoft.Extensions.Caching.Memory.CacheExtensions]::GetOrCreate($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetOrCreate' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetOrCreateAsync</Name>
+        <Script> switch ($args.Count) {
+				 # GetOrCreateAsync([Microsoft.Extensions.Caching.Memory.IMemoryCache] $cache, [System.Object] $key, [System.Func`2[Microsoft.Extensions.Caching.Memory.ICacheEntry,System.Threading.Tasks.Task`1[TItem]]] $factory)
+		 2 { [Microsoft.Extensions.Caching.Memory.CacheExtensions]::GetOrCreateAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetOrCreateAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Set</Name>
+        <Script> switch ($args.Count) {
+				 # Set([Microsoft.Extensions.Caching.Memory.IMemoryCache] $cache, [System.Object] $key, [TItem] $value)
+		 2 { [Microsoft.Extensions.Caching.Memory.CacheExtensions]::Set($this,$args[0],$args[1]) }
+
+				 # Set([Microsoft.Extensions.Caching.Memory.IMemoryCache] $cache, [System.Object] $key, [TItem] $value, [System.DateTimeOffset] $absoluteExpiration)
+		 3 { [Microsoft.Extensions.Caching.Memory.CacheExtensions]::Set($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'Set' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>TryGetValue</Name>
+        <Script> switch ($args.Count) {
+				 # TryGetValue([Microsoft.Extensions.Caching.Memory.IMemoryCache] $cache, [System.Object] $key, [TItem&amp;] $value)
+		 2 { [Microsoft.Extensions.Caching.Memory.CacheExtensions]::TryGetValue($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'TryGetValue' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>
