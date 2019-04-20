@@ -102,7 +102,7 @@ RequiredAssemblies = @(
     ".\bin\Microsoft.Extensions.Logging.Console.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Console.dll"
     ".\bin\Microsoft.Extensions.Options.ConfigurationExtensions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll"
     ".\bin\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll"
-    
+    ".\bin\Microsoft.Extensions.FileProviders.Embedded.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.dll"
 
     # In order to configure static files, we needed...
     ".\bin\Microsoft.AspNetCore.StaticFiles.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.StaticFiles.dll"
@@ -146,6 +146,10 @@ RequiredAssemblies = @(
     ".\bin\Microsoft.AspNetCore.JsonPatch.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.JsonPatch.dll"
     ".\bin\Microsoft.AspNetCore.Html.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Html.Abstractions.dll"
     ".\bin\Microsoft.Extensions.DependencyModel.2.1.0\lib\netstandard1.6\Microsoft.Extensions.DependencyModel.dll"
+    ".\bin\Swashbuckle.AspNetCore.4.0.1\lib\netstandard2.0\Swashbuckle.AspNetCore.dll"
+    ".\bin\Swashbuckle.AspNetCore.Swagger.4.0.1\lib\netstandard2.0\Swashbuckle.AspNetCore.Swagger.dll"
+    ".\bin\Swashbuckle.AspNetCore.SwaggerGen.4.0.1\lib\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.dll"
+    ".\bin\Swashbuckle.AspNetCore.SwaggerUI.4.0.1\lib\netstandard2.0\Swashbuckle.AspNetCore.SwaggerUI.dll"
 )
 
 # Script files (.ps1) that are run in the caller's environment prior to importing this module.

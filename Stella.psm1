@@ -24,6 +24,9 @@ using namespace Microsoft.AspNetCore.Routing.Internal
 using namespace Microsoft.AspNetCore.Routing.Patterns
 using namespace Microsoft.AspNetCore.Routing.Constraints
 using namespace Microsoft.AspNetCore.Http
+using namespace Swashbuckle.AspNetCore.Swagger
+using namespace Swashbuckle.AspNetCore.SwaggerGen
+using namespace Swashbuckle.AspNetCore.SwaggerUI
 
 $webroot = Join-Path $PSScriptRoot Web
 
@@ -108,11 +111,14 @@ class Stella {
             param($loggingBuilder)
             [Stella]::WriteAvailableMethods('LoggingBuilder', $loggingBuilder)
             $loggingBuilder.ClearProviders()> $null
-            # Disable Error because Assembly loading error
-            $loggingBuilder.AddFilter('Microsoft.AspNetCore.Hosting.Internal.WebHost', [LogLevel]::None)
+            
+            # Disable Internal WebHost Error because Assembly loading error # need verification
+            # $loggingBuilder.AddFilter('Microsoft.AspNetCore.Hosting.Internal.WebHost', [LogLevel]::None)
+            
             $loggingBuilder.AddConsole([Action[ConsoleLoggerOptions]]{ param($options) $options.IncludeScopes = $true}) > $null
-            $loggingBuilder.SetMinimumLevel([LogLevel]::Error)  > $null
-            # $loggingBuilder.SetMinimumLevel([LogLevel]::Trace)  > $null
+            
+            # $loggingBuilder.SetMinimumLevel([LogLevel]::Error)  > $null
+            $loggingBuilder.SetMinimumLevel([LogLevel]::Trace)  > $null
         })
         
         $partManager = [PowerShellPartManager]::new()
@@ -180,7 +186,11 @@ class Stella {
         $svc.AddMvc([Action[MvcOptions]]{ param($options) $options.EnableEndpointRouting = $true}).
              SetCompatibilityVersion([CompatibilityVersion]::Version_2_2).
              AddControllersAsServices()
-                  
+
+        [SwaggerGenServiceCollectionExtensions]::AddSwaggerGen($svc, [Action[SwaggerGenOptions]][PSDelegate]{
+            param([SwaggerGenOptions]$c)
+            [SwaggerGenOptionsExtensions]::SwaggerDoc($c, 'v1', [Info]@{ Title = 'My API'; Version = 'v1' })
+        })
     }
 
     [void] Configure([IApplicationBuilder]$app, [IHostingEnvironment]$env) {
@@ -220,6 +230,12 @@ class Stella {
         }
         
         $app.UseMvc()
+        
+        [SwaggerBuilderExtensions]::UseSwagger($app)
+        [SwaggerUIBuilderExtensions]::UseSwaggerUI($app, [Action[SwaggerUIOptions]][PSDelegate]{
+            param([SwaggerUIOptions]$c)
+            [SwaggerUIOptionsExtensions]::SwaggerEndpoint($c, '/swagger/v1/swagger.json', 'My API V1')
+        })
         
         $app.psbase.Use([Func`2[[RequestDelegate], [RequestDelegate]]]{
             param([RequestDelegate]$next)
